@@ -1,0 +1,99 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* Global 
+----------------------------------------------------------------------------- */
+
+  html, body { 
+		background: #000;
+		color: #fff;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+}
+  
+	h1, h2 {font-family: 'Lobster'; font-weight: 700; line-height: 24px; color: #fff;}
+	h1 {font-size: 48px; margin-bottom: 36px;}
+	h2 {font-size: 32px; margin-top: 24px; margin-bottom: 16px;}
+	h3 {font-size: 24px; font-family: 'Philosopher'; font-weight: 700; line-height: 24px; color: #fff;}
+	h4 {font-size: 18px; margin-bottom: 24px; color: grey;}
+
+	p {font-size: 16px; margin-bottom: 10px; font-family: 'Philosopher';}
+
+
+/* Navigation
+----------------------------------------------------------------------------- */
+	
+	a {
+	  color: #FF6600;
+	  font-weight:bold;
+	  text-decoration:none;
+	  padding: 3px;
+}
+
+  a:hover {
+	  background: #FF6600;
+	  color: rgb(241,250,250);
+	  cursor:pointer;
+}
+
+
+/* Tables
+----------------------------------------------------------------------------- */
+
+  table {
+		padding-left: 200px;
+		text-align: center;
+}
+
+  th {
+		padding-left: 150px;
+		padding-bottom: 50px;
+		font-size: 24px;
+		font-family: 'Philosopher';
+}
+
+  td {
+		padding-left: 150px;
+		padding-bottom: 50px;
+}
+
+
+/* Forms
+----------------------------------------------------------------------------- */
+
+  textarea {
+    -webkit-appearance: textarea;
+    background-color: #fff;
+    padding: 16px;
+    width: 468px;
+    height: 240px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+}
+
+  input, input[type="password"], input[type="search"] {
+    -webkit-appearance: textfield;
+    background-color: #fff;
+    padding: 16px;
+    width: 468px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+} 
+
+  input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button {
+    font-size: 18px;
+	  background: #FF6600;
+    color: #fff;
+	  font-family:"Audiowide";
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    width: 200px;
+    outline: none;
+    margin-bottom: 16px;
+}

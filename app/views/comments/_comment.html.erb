@@ -1,7 +1,11 @@
-<h3>
-  <%= comment.commenter %>:<br><%= comment.body %>
+<h3 class="comment-lefty">
+  <%= comment.commenter %>
 </h3>
- 
+
+<p class="comment-lefty">
+  <%= comment.body %>
+</p>
+
 <p>
   <%= link_to 'Destroy Comment', [comment.article, comment],
                method: :delete,

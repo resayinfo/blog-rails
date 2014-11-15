@@ -8,11 +8,19 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+  <meta name="viewport" content="width=980">
 
 </head>
 <body>
 
-<%= yield %>
+  <div class="wholepage">
+    <%= yield %>
+    <div class="social">
+      <iframe src='http://www.facebook.com/plugins/like.php?href=https://www.facebook.com/monmouthcourier&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80' scrolling='no' frameborder='0' style='border:none; overflow:hidden; height:80px;' allowTransparency='true'></iframe>
+      <g:plusone></g:plusone>
+    </div><!-- social -->
+  </div><!-- wholepage -->
 
 </body>
 </html>

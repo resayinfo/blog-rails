@@ -83,6 +83,10 @@
 /* Tables
 ----------------------------------------------------------------------------- */
 
+  table {
+    width: 960px;
+}
+
   th {
 		padding-top: 12px;
 		padding-bottom: 12px;
@@ -94,7 +98,6 @@
 }
 
   td {
-    width: 160px;
 		padding-bottom: 30px;
 		padding-top: 30px;
     // border: 1px solid #5b5b5b;

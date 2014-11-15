@@ -165,6 +165,20 @@
     border-color: rgba(0, 255, 0, 0.5);
 }
 
+  .btn-default {
+    background-color: rgba(239, 251, 251, 0.7);
+    border-color: #5b5b5b;
+    color: #000;
+    font-weight: 600;
+}
+
+  .btn-default:hover {
+    background-color: rgba(239, 251, 251, 0.9);
+    border-color: #5b5b5b;
+    color: #000;
+    font-weight: 700;
+}
+
   .alerts-wrapper {
     margin: 0 auto;
     width: 400px;

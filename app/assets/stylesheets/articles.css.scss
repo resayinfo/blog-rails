@@ -32,7 +32,7 @@
 	  margin:auto;
 		background: #000;
     opacity: 0.9;
-    padding-top: 30px;
+    padding-top: 60px;
     // border: 1px solid #5b5b5b;
 }
 
@@ -153,4 +153,19 @@
 //     border: none;
 //     outline: none;
     width: 200px;
+}
+
+  .btn-primary, .btn-success {
+    background-color: rgba(0, 255, 0, 0.5);
+    border-color: rgba(0, 255, 0, 0.5);
+}
+
+  .btn-primary:hover, .btn-success:hover {
+    background-color: rgba(0, 255, 0, 0.5);
+    border-color: rgba(0, 255, 0, 0.5);
+}
+
+  .alerts-wrapper {
+    margin: 0 auto;
+    width: 400px;
 }

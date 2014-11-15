@@ -40,6 +40,11 @@
     margin-bottom: 20px;
 }
 
+  .articles-header-pic-1 {
+		width: 40%;
+		height: 40%;
+}
+
 
 /* Navigation
 ----------------------------------------------------------------------------- */
@@ -63,23 +68,24 @@
 ----------------------------------------------------------------------------- */
 
   table {
-		padding-left: 200px;
-    padding-right: 5%;
-    // border: 1px solid white;
+    border: 1px solid white;
 }
 
   th {
     width: 250px;
-		padding-right: 5%;
-		padding-bottom: 5%;
+		padding-top: 2%;
+		padding-bottom: 3%;
 		font-size: 25px;
 		font-family: 'Philosopher';
+    border: 1px solid #5b5b5b;
+    text-align: center;
 }
 
   td {
     width: 10%;
-		padding-right: 5%;
-		padding-bottom: 5%;
+		padding-bottom: 3%;
+		padding-top: 2%;
+    border: 1px solid #5b5b5b;
 }
 
   .show-lefty {
@@ -94,8 +100,9 @@
     padding-right: 30%;
 }
 
-  .index-lefty {
+  .articles-index-lefty {
     text-align: left;
+    padding-left: 1%;
     width: 40%;
 }
 

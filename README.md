@@ -8,6 +8,6 @@ $ cd rails-blog
 
 $ rake db:migrate
 
-$ rails s
+$ rake db:seed
 
-<!-- If need be, $rake db:seed  -->
+$ rails s

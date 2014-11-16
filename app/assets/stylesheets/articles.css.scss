@@ -59,11 +59,19 @@
   .articles-header-pic-1 {
 		width: 220px;
 		height: 160px;
+    padding-right: 8px;
     opacity: 0.7;
 }
 
   .articles-index-table-headlines {
     color: rgb(77, 87, 97);
+}
+
+  .articles-index-nothing-yet-pic {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: 0 auto;
+    opacity: 0.9;
 }
 
   .articles-index-sub-header {

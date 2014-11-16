@@ -90,6 +90,11 @@
 /* Header (Bootstrap)
 ----------------------------------------------------------------------------- */
 
+  .container-fluid {
+		background: #000;
+    opacity: 0.5;
+}
+
   .navbar navbar-inverse, .navbar-fixed-top {
     width: 960px;
     margin: 0 auto;
@@ -115,7 +120,8 @@
   .footer p {
     font-family: "Lobster";
     color: rgba(239, 251, 251, 0.9);
-    padding: 5px;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 

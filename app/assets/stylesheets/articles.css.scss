@@ -9,6 +9,7 @@
   html {
   background: #000;
 }
+
   body {
 		color: #fff;
 		text-align: center;
@@ -131,15 +132,11 @@
     outline: none;
 }
 
-  input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button {
-//     font-size: 18px;
-//     background: #FF6600;
-//     color: #fff;
-// 	   font-family:"Audiowide";
-//     text-decoration: none;
-//     cursor: pointer;
-//     border: none;
-//     outline: none;
+
+/* Buttons
+----------------------------------------------------------------------------- */
+
+  input[type=submit] {
     width: 200px;
 }
 
@@ -167,10 +164,18 @@
     font-weight: 700;
 }
 
+
+/* Alerts
+----------------------------------------------------------------------------- */
+
   .alerts-wrapper {
     margin: 0 auto;
     width: 400px;
 }
+
+
+/* Header (Bootstrap)
+----------------------------------------------------------------------------- */
 
   .navbar navbar-inverse, .navbar-fixed-top {
     width: 960px;
@@ -185,12 +190,16 @@
     color: rgba(239, 251, 251, 0.9);
   }
 
-  .footer p {
-    font-family: "Lobster";
-    padding: 5px;
-}
+
+/* Footer
+----------------------------------------------------------------------------- */
 
   .social {
     margin-top: 60px;
     margin-bottom: 40px;
+}
+
+  .footer p {
+    font-family: "Lobster";
+    padding: 5px;
 }

@@ -16,31 +16,31 @@
 
   <div class="wholepage">
     <% if user_signed_in? %>
+
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
             <%= link_to 'Home', root_path, class: 'navbar-brand' %>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to current_user.email, destroy_user_session_path, method: :delete %></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+          </div><!-- navbar-header -->
+          <div class="nav navbar-nav navbar-right">
+            <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li><!-- current_user.email -->
+          </div><!-- nav navbar-nav navbar-right -->
+        </div><!-- container-fluid -->
+      </div><!-- "navbar navbar-inverse navbar-fixed-top" role="navigation" -->
+
     <% end %>
 
     <%= yield %>
-    <div class="social">
-      <iframe src='http://www.facebook.com/plugins/like.php?href=https://www.facebook.com/monmouthcourier&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=120' scrolling='no' frameborder='0' style='border:none; overflow:hidden; height:120px;' allowTransparency='true'></iframe>
-      <g:plusone></g:plusone>
-    </div><!-- social -->
+
+      <div class="social">
+        <iframe src='http://www.facebook.com/plugins/like.php?href=https://www.facebook.com/monmouthcourier&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=120' scrolling='no' frameborder='0' style='border:none; overflow:hidden; height:120px;' allowTransparency='true'></iframe>
+        <g:plusone></g:plusone>
+      </div><!-- social -->
+
+      <div class="footer">
+        <p>&copy; 2014 / All Rights Reserved</p>
+      </div><!--. footer -->
+
   </div><!-- wholepage -->
 
 </body>

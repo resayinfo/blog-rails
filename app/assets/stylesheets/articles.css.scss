@@ -36,11 +36,6 @@
     // border: 1px solid #5b5b5b;
 }
 
-  .social {
-    margin-top: 60px;
-    margin-bottom: 30px;
-}
-
   .welcome-pic-1 {
 		width: 340;
 		height: 240px;
@@ -59,6 +54,18 @@
 		width: 240px;
 		height: 160px;
     opacity: 0.7;
+}
+
+  .articles-show-lefty {
+		padding-left: 6px;
+		padding-right: 6px;
+    text-align: left;
+}
+
+  .comment-lefty {
+		padding-left: 6px;
+		padding-right: 6px;
+    text-align: left;
 }
 
 
@@ -83,41 +90,20 @@
 /* Tables
 ----------------------------------------------------------------------------- */
 
-  table {
-    width: 960px;
-}
-
   th {
-		padding-top: 12px;
-		padding-bottom: 12px;
-		font-size: 24px;
-		font-family: 'Philosopher';
-    // border: 1px solid #5b5b5b;
+		padding-left: 6px;
+		padding-right: 6px;
     text-align: center;
-    color: #5b5b5b;
+    font-family: 'Lobster';
+    font-size: 30px;
 }
 
   td {
 		padding-bottom: 30px;
 		padding-top: 30px;
-    // border: 1px solid #5b5b5b;
-}
-
-  .show-lefty {
+		padding-left: 6px;
+		padding-right: 6px;
     text-align: left;
-    padding-left: 120px;
-    padding-right: 120px;
-}
-
-  .comment-lefty {
-    text-align: left;
-    padding-left: 240px;
-    padding-right: 240px;
-}
-
-  .articles-index-lefty {
-    text-align: left;
-    padding-left: 12px;
 }
 
 
@@ -198,3 +184,13 @@
   .navbar-inverse .navbar-nav>li>a:hover {
     color: rgba(239, 251, 251, 0.9);
   }
+
+  .footer p {
+    font-family: "Lobster";
+    padding: 5px;
+}
+
+  .social {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}

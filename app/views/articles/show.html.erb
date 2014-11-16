@@ -1,5 +1,4 @@
 <h1><%= @article.title %></h1>
-<h3><%= link_to 'Back to Articles', articles_path, class: 'btn btn-primary' %></h3>
 
 <h2 class="articles-show-title">
   <%= @article.title %>
@@ -20,3 +19,5 @@
   <%= render @article.comments %>
 <h3 class="comment">Add a comment:</h3>
   <%= render "comments/form" %>
+
+<h3><%= link_to 'Back to Articles', articles_path, class: 'btn btn-primary' %></h3>

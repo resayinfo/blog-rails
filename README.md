@@ -9,3 +9,5 @@ $ cd rails-blog
 $ rake db:migrate
 
 $ rails s
+
+<!-- If need be, $rake db:seed  -->

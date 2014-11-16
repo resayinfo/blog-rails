@@ -62,15 +62,36 @@
     opacity: 0.7;
 }
 
+  .articles-index-table-headlines {
+    color: rgb(77, 87, 97);
+}
+
   .articles-index-sub-header {
     color: rgb(77, 87, 97);
-    font-family: "Lobster";
+    font-family: "Audiowide";
     padding-top: 3px;
     padding-bottom: 6px;
 }
 
-  .articles-index-table-headlines {
+  .articles-new-sub-header {
     color: rgb(77, 87, 97);
+    font-family: "Audiowide";
+    padding-top: 3px;
+    padding-bottom: 6px;
+}
+
+  .articles-edit-sub-header {
+    color: rgb(77, 87, 97);
+    font-family: "Audiowide";
+    padding-top: 3px;
+    padding-bottom: 6px;
+}
+
+  .articles-show-sub-header {
+    color: rgb(77, 87, 97);
+    font-family: "Audiowide";
+    padding-top: 3px;
+    padding-bottom: 6px;
 }
 
   .articles-show-lefty {
@@ -83,6 +104,11 @@
     color: rgb(77, 87, 97);
 		padding-left: 60px;
     text-align: left;
+}
+
+  .articles-form-headers {
+    color: rgb(77, 87, 97);
+    font-family: "Lobster";
 }
 
   .comments {

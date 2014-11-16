@@ -20,7 +20,9 @@
 
 <h3 class="comments">Comments</h3>
   <%= render @article.comments %>
-<h3 class="comment">Add a comment:</h3>
-  <%= render "comments/form" %>
+<% if can? :update, @comment %>
+  <h3 class="comment">Add a comment:</h3>
+    <%= render "comments/form" %>
+<% end %>
 
 <h3><%= link_to 'Back to Articles', articles_path, class: 'btn btn-primary' %></h3>

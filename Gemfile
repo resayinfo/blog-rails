@@ -43,3 +43,5 @@ gem 'devise'
 
 # Authorization
 gem 'cancan'
+
+gem "rolify"

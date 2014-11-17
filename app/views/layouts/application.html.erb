@@ -21,8 +21,8 @@
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container-fluid">
           <ul class="nav navbar-nav navbar-left">
-            <li><%= link_to 'Home', root_path, class: 'navbar-brand' %></li>
-            <li><%= link_to 'Articles', articles_path, class: 'navbar-brand' %></li>
+            <li class="<%= controller.class == WelcomeController  || controller.class == WelcomeController || controller.class == WelcomeController ? 'active' : '' %>"><%= link_to 'Home', root_path, class: 'navbar-brand' %></li>
+            <li class="<%= controller.class == ArticlesController  || controller.class == ArticlesController || controller.class == ArticlesController ? 'active' : '' %>"><%= link_to 'Articles', articles_path, class: 'navbar-brand' %></li>
             <% if can? :manage, Article %>
               <li><%= link_to 'Articles', articles_path, class: 'navbar-brand' %></li>
               <li><%= link_to 'Articles', articles_path, class: 'navbar-brand' %></li>

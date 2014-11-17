@@ -154,7 +154,17 @@
     color: rgba(239, 251, 251, 0.7);
     padding-right: 24px;
     padding-left: 24px;
+    padding-top: 20px;
+    height:60px;
   }
+
+  .navbar-inverse .navbar-nav>.active>a {
+    background: rgba(118, 47, 158, 0.2);
+}
+
+  .navbar-inverse .navbar-nav>.active>a:hover {
+    background: rgba(118, 47, 158, 0.3);
+}
 
 
 /* Footer

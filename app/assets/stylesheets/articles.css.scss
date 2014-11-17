@@ -159,10 +159,8 @@
 
   .navbar-inverse .navbar-nav>li>a {
     color: rgba(239, 251, 251, 0.7);
-  }
-
-  .navbar-inverse .navbar-nav>li>a:hover {
-    color: rgba(239, 251, 251, 0.9);
+    padding-right: 24px;
+    padding-left: 24px;
   }
 
 

@@ -21,7 +21,7 @@
 
 <h3 class="comments">Comments</h3>
   <%= render @article.comments %>
-<% if can? :update, @comment %>
+<% if can? :manage, Comment %>
   <h3 class="comment">Add a comment:</h3>
     <%= render "comments/form" %>
 <% end %>

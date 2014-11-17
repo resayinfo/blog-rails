@@ -6,7 +6,7 @@
   <%= comment.body %>
 </p>
 
-<% if can? :update, @comment %>
+<% if can? :manage, Article %>
   <p class="comment-lefty">
     <%= link_to 'Destroy Comment', [comment.article, comment], class: 'btn btn-default',
                  method: :delete,

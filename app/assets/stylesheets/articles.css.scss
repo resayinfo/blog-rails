@@ -166,18 +166,25 @@
 
   .navbar-inverse .navbar-nav>li>a {
     color: rgba(239, 251, 251, 0.7);
-    padding-right: 24px;
-    padding-left: 24px;
+    margin-right: 24px;
+    margin-left: 24px;
     padding-top: 20px;
     height:60px;
   }
 
+  .navbar-inverse .navbar-nav>li>a:hover {
+    color: rgba(239, 251, 251, 0.9);
+    background: rgba(118, 47, 158, 0.3);
+  }
+
   .navbar-inverse .navbar-nav>.active>a {
     background: rgba(118, 47, 158, 0.2);
+    color: rgba(239, 251, 251, 0.9);
 }
 
   .navbar-inverse .navbar-nav>.active>a:hover {
     background: rgba(118, 47, 158, 0.3);
+    color: rgba(239, 251, 251, 0.9);
 }
 
 

@@ -6,8 +6,10 @@
   <%= comment.body %>
 </p>
 
-<p class="comment-lefty">
-  <%= link_to 'Destroy Comment', [comment.article, comment], class: 'btn btn-default',
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
+<% if can? :update, @comment %>
+  <p class="comment-lefty">
+    <%= link_to 'Destroy Comment', [comment.article, comment], class: 'btn btn-default',
+                 method: :delete,
+                 data: { confirm: 'Are you sure?' } %>
+  </p>
+<% end %>

@@ -29,8 +29,7 @@
             <% end %>
           </ul><!-- nav navbar-nav navbar-left -->
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li><!-- current_user.email
-            <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li> -->
+            <li class="logout"><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
           </ul><!-- nav navbar-nav navbar-right -->
         </div><!-- container-fluid -->
       </div><!-- "navbar navbar-inverse navbar-fixed-top" role="navigation" -->

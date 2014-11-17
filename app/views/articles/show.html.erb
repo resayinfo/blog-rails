@@ -1,7 +1,6 @@
-<h1><%= @article.created_at.strftime("%B %-d, %Y") %></h1>
-<h2 class="articles-show-updated-sub-header"><%= @article.updated_at.strftime("%B %-d, %Y") if @article.updated_at.present? %></h2>
-
-<h2 class="articles-show-sub-header"><%= @article.title %></h2>
+<h1><%= @article.title %></h1>
+<h1>Created <%= @article.created_at.strftime("%B %-d, %Y") %></h1>
+<h2 class="articles-show-updated-sub-header">Updated <%= @article.updated_at.strftime("%B %-d, %Y") if @article.updated_at.present? %></h2>
 
 <h2 class="articles-show-title">
   <%= @article.title %>

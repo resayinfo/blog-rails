@@ -13,7 +13,7 @@
 <!-- <a href="<%= @article.text %>" target="_blank"><%= @article.text %></a> -->
 <!-- <iframe width="940" height="480" src="<%= @article.text %>" frameborder="0" allowfullscreen></iframe> -->
 
-<% if can? :update, @article %>
+<% if can? :manage, Article %>
   <h3>
     <%= link_to 'Edit Article', edit_article_path(@article), class: 'btn btn-primary' %>
   </h3>

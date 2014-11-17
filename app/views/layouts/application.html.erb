@@ -23,6 +23,10 @@
           <ul class="nav navbar-nav navbar-left">
             <li><%= link_to 'Home', root_path, class: 'navbar-brand' %></li>
             <li><%= link_to 'Articles', articles_path, class: 'navbar-brand' %></li>
+            <% if can? :manage, Article %>
+              <li><%= link_to 'Articles', articles_path, class: 'navbar-brand' %></li>
+              <li><%= link_to 'Articles', articles_path, class: 'navbar-brand' %></li>
+            <% end %>
           </ul><!-- nav navbar-nav navbar-left -->
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li><!-- current_user.email

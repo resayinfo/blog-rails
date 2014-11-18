@@ -246,9 +246,6 @@
     text-align: left;
 }
 
-  .logout {
-    margin-right: -16px;
-}
 
 /* Header (Bootstrap)
 ----------------------------------------------------------------------------- */
@@ -261,6 +258,10 @@
   .navbar .navbar-inverse, .navbar-fixed-top {
     width: 960px;
     margin: 0 auto;
+}
+
+  .dropdown {
+    margin-right: 6px;
 }
 
   .navbar-inverse .navbar-nav>li>a {

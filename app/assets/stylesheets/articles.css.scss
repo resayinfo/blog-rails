@@ -103,23 +103,23 @@ input[type=submit] {
 ----------------------------------------------------------------------------- */
 
 .btn-primary, .btn-success {
-  background-color: rgba(0, 255, 0, 0.5);
-  border-color: rgba(0, 255, 0, 0.5);
+  background: rgba(118, 47, 158, 0.4);
+  border-color: rgba(118, 47, 158, 0.4);
 }
 
 .btn-primary:hover, .btn-success:hover {
-  background-color: rgba(0, 255, 0, 0.7);
-  border-color: rgba(0, 255, 0, 0.7);
+  background-color: rgba(118, 47, 158, 0.5);
+  border-color: rgba(118, 47, 158, 0.5);
 }
 
 .btn-danger {
-  background-color: rgba(215, 0, 44, 0.5);
-  border-color: rgba(215, 0, 44, 0.5);
+  background-color: rgba(215, 0, 44, 0.4);
+  border-color: rgba(215, 0, 44, 0.4);
 }
 
 .btn-danger:hover {
-  background-color: rgba(215, 0, 44, 0.7);
-  border-color: rgba(215, 0, 44, 0.7);
+  background-color: rgba(215, 0, 44, 0.5);
+  border-color: rgba(215, 0, 44, 0.5);
 }
 
 .btn-default {
@@ -245,7 +245,7 @@ input[type=submit] {
 ----------------------------------------------------------------------------- */
 
 .container-fluid {
-	background: rgba(118, 47, 158, 0.1);
+	background: rgba(118, 47, 158, 0.4);
   font-size: 16px;
 }
 
@@ -267,17 +267,17 @@ input[type=submit] {
   }
 
 .navbar-inverse .navbar-nav>li>a:hover {
-  background: rgba(118, 47, 158, 0.2);
+  background: rgba(0,0,0, 0.3);
   color: rgba(239, 251, 251, 0.9);
   }
 
 .navbar-inverse .navbar-nav>.active>a {
-  background: rgba(118, 47, 158, 0.2);
+  background: rgba(0,0,0, 0.3);
   color: rgba(239, 251, 251, 0.9);
 }
 
 .navbar-inverse .navbar-nav>.active>a:hover {
-  background: rgba(118, 47, 158, 0.2);
+  background: rgba(0,0,0, 0.3);
   color: rgba(239, 251, 251, 0.9);
 }
 

@@ -103,13 +103,23 @@ input[type=submit] {
 ----------------------------------------------------------------------------- */
 
 .btn-primary, .btn-success {
-  background-color: rgba(0, 255, 0, 0.4);
-  border-color: rgba(0, 255, 0, 0.4);
+  background-color: rgba(0, 255, 0, 0.5);
+  border-color: rgba(0, 255, 0, 0.5);
 }
 
 .btn-primary:hover, .btn-success:hover {
-  background-color: rgba(0, 255, 0, 0.6);
-  border-color: rgba(0, 255, 0, 0.6);
+  background-color: rgba(0, 255, 0, 0.7);
+  border-color: rgba(0, 255, 0, 0.7);
+}
+
+.btn-danger {
+  background-color: rgba(215, 0, 44, 0.5);
+  border-color: rgba(215, 0, 44, 0.5);
+}
+
+.btn-danger:hover {
+  background-color: rgba(215, 0, 44, 0.7);
+  border-color: rgba(215, 0, 44, 0.7);
 }
 
 .btn-default {
@@ -163,12 +173,6 @@ input[type=submit] {
   margin-bottom: 60px;
 }
 
-.articles-header-pic-1 {
-	width: 220px;
-	height: 160px;
-  opacity: 0.7;
-}
-
 .articles-index-table-headlines {
   color: rgb(77, 87, 97);
 }
@@ -178,13 +182,6 @@ input[type=submit] {
   padding-bottom: 12px;
   margin: 0 auto;
   opacity: 0.9;
-}
-
-.articles-index-sub-header {
-  color: rgb(77, 87, 97);
-  font-family: "Audiowide";
-  padding-top: 3px;
-  padding-bottom: 6px;
 }
 
 .articles-new-sub-header {

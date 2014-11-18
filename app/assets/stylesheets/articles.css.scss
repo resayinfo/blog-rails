@@ -173,15 +173,19 @@ input[type=submit] {
   margin-bottom: 60px;
 }
 
-.articles-index-table-headlines {
-  color: rgb(77, 87, 97);
-}
-
 .articles-index-nothing-yet-pic {
   padding-top: 12px;
   padding-bottom: 12px;
   margin: 0 auto;
   opacity: 0.9;
+}
+
+.articles-index-header {
+  margin-bottom: 24px;
+}
+
+.articles-index-table-headlines {
+  color: rgb(77, 87, 97);
 }
 
 .articles-new-sub-header {

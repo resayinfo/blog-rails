@@ -11,14 +11,16 @@
 </p>
 <!-- <a href="<%= @article.text %>" target="_blank"><%= @article.text %></a> -->
 <!-- <iframe width="940" height="480" src="<%= @article.text %>" frameborder="0" allowfullscreen></iframe> -->
-
-<% if can? :manage, Article %>
-  <h3>
-    <p><%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-primary' %></p>
-    <p><%= link_to 'Delete', article_path(@article) , class: 'btn btn-danger',
-                          method: :delete, data: { confirm: 'Are you sure?' } %></p>
-  </h3>
-<% end %>
+<table>
+  <tr>
+      <td><%= link_to 'Back', articles_path, class: 'btn btn-default' %></td>
+    <% if can? :manage, Article %>
+      <td><%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-default' %></td>
+      <td><%= link_to 'Delete', article_path(@article) , class: 'btn btn-danger',
+                              method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+  </tr>
+</table>
 
 <h2 class="comments">Comments</h2>
   <%= render @article.comments %>

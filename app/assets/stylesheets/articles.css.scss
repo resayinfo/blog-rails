@@ -103,23 +103,23 @@ input[type=submit] {
 ----------------------------------------------------------------------------- */
 
 .btn-primary, .btn-success {
-  background: rgba(118, 47, 158, 0.4);
-  border-color: rgba(118, 47, 158, 0.4);
+  background-color: rgba(255, 255, 93, 0.4);
+  border-color: rgba(251, 255, 91, 0.4);
 }
 
 .btn-primary:hover, .btn-success:hover {
-  background-color: rgba(118, 47, 158, 0.5);
-  border-color: rgba(118, 47, 158, 0.5);
+  background-color: rgba(255, 255, 93, 0.5);
+  border-color: rgba(251, 255, 91, 0.5);
 }
 
 .btn-danger {
-  background-color: rgba(215, 0, 44, 0.4);
-  border-color: rgba(215, 0, 44, 0.4);
+  background-color: rgba(215, 0, 44, 0.5);
+  border-color: rgba(215, 0, 44, 0.5);
 }
 
 .btn-danger:hover {
-  background-color: rgba(215, 0, 44, 0.5);
-  border-color: rgba(215, 0, 44, 0.5);
+  background-color: rgba(215, 0, 44, 0.7);
+  border-color: rgba(215, 0, 44, 0.7);
 }
 
 .btn-default {

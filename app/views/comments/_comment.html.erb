@@ -3,7 +3,7 @@
 <p class="comments-lefty"><%= comment.body %></p>
 
 <% if can? :manage, Article %>
-  <p class="comment-lefty">
+  <p class="comments-lefty">
     <%= link_to 'Destroy Comment', [comment.article, comment], class: 'btn btn-default',
                  method: :delete,
                  data: { confirm: 'Are you sure?' } %>

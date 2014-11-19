@@ -2,7 +2,7 @@
 
 <p class="comments-lefty"><%= comment.body %></p>
 
-<% if can? :manage, Article %>
+<% if can? :manage, Comment %>
   <p class="comments-lefty">
     <%= link_to 'Delete', [comment.article, comment], class: 'btn btn-danger',
                  method: :delete,

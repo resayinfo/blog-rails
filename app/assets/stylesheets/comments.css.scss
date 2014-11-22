@@ -1,3 +1,25 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* Content
+----------------------------------------------------------------------------- */
+
+.comment {
+  color: rgb(77, 87, 97);
+  font-family: "Lobster";
+}
+
+.comments {
+  color: rgb(77, 87, 97);
+  padding-left: 120px;
+  text-align: left;
+  font-family: "Lobster";
+}
+
+.comments-lefty {
+  padding-left: 120px;
+  padding-right:120px;
+  text-align: left;
+}

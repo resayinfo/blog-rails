@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   end
 
   resources :admins
-  
+
+  resources :superadmins
+
   root 'welcome#index'
 end

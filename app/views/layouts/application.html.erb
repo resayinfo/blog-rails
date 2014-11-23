@@ -26,7 +26,7 @@
             <li class="<%= controller.class == WelcomeController  || controller.class == WelcomeController || controller.class == WelcomeController ? 'active' : '' %>"><%= link_to 'Home', root_path, class: 'navbar-brand' %></li>
             <li class="<%= controller.class == ArticlesController  || controller.class == ArticlesController || controller.class == ArticlesController ? 'active' : '' %>"><%= link_to 'Articles', articles_path, class: 'navbar-brand' %></li>
             <% if can? :manage, Article %>
-              <li><%= link_to 'Admins', admins_path, class: 'navbar-brand' %></li>
+            <li class="<%= controller.class == AdminsController  || controller.class == AdminsController || controller.class == AdminsController ? 'active' : '' %>"><%= link_to 'Admins', admins_path, class: 'navbar-brand' %></li>
               <li><%= link_to 'Supers', articles_path, class: 'navbar-brand' %></li>
             <% end %>
           </ul><!-- nav navbar-nav navbar-left -->

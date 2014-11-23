@@ -45,3 +45,22 @@ gem 'devise'
 gem 'cancan'
 
 gem "rolify"
+
+# Development only gems
+group :development do
+  gem 'guard-cucumber'
+  gem 'guard-rspec'
+end
+
+# Specs
+group :test, :development do
+  gem 'rspec-rails', '~> 3.0'
+end
+
+# Testing only gems
+group :test do
+  gem 'capybara'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+end

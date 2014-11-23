@@ -1,27 +1,25 @@
-<h1 class="page-header">Administrators</h1>
+<h1 class="articles-index-header">Administrators</h1>
 
-<table class="table">
-  <thead>
+<table>
+  <tr>
+    <th class="articles-index-table-headlines">Name</th>
+    <th class="articles-index-table-headlines">Email</th>
+    <th colspan="3">
+      <% if can? :create, User %>
+        <%= link_to 'New Administrator', new_admin_path, class: 'btn btn-success' %>
+      <% end %>
+    </th>
+  </tr>
+  <% @admins.each do |admin| %>
     <tr>
-      <th>Name</th>
-      <th>
-        <% if can? :create, User %>
-          <%= link_to 'New Administrator', new_admin_path, class: 'btn btn-success' %>
-        <% end %>
-      </th>
-      </tr>
-  </thead>
-  <tbody>
-    <% @admins.each do |admin| %>
-    <tr>
-      <td><%= link_to admin.name, admin_path(admin) %></td>
-      <td>
-        <% if can? :manage, admin %>
-          <%= link_to 'Edit', edit_admin_path(admin), class: 'btn btn-default btn-xs' %>
-          <%= link_to 'Delete', admin_path(admin), method: :delete, data: { confirm: 'Are you sure you want to delete this administrator?' }, class: 'btn btn-xs btn-danger' %>
-        <% end %>
-      </td>
+      <td><%= admin.name %></td>
+      <td class="articles-index-lefty"><%= link_to admin.email, admin.email %></td>
+      <% if can? :manage, admin %>
+        <td><%= link_to 'Show', admin_path(admin), class: 'btn btn-default' %></td>
+        <td><%= link_to 'Edit', edit_admin_path(admin), class: 'btn btn-default' %></td>
+        <td><%= link_to 'Delete', admin_path(admin) , class: 'btn btn-danger',
+                method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
     </tr>
-    <% end %>
-  </tbody>
+  <% end %>
 </table>

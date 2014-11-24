@@ -19,9 +19,9 @@
   margin-top: 60px;
   opacity: 0.7;
   background: none;
-  -webkit-filter: sepia(100%);
-  -moz-filter: sepia(100%);
-  filter: sepia(100%);
+  -webkit-filter: blur(100%);
+  -moz-filter: blur(100%);
+  filter: blur(100%);
 }
 
 .articles-index-header {

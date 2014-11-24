@@ -10,4 +10,6 @@ $ rake db:migrate
 
 $ rake db:seed
 
+$ bundle exec rspec
+
 $ rails s

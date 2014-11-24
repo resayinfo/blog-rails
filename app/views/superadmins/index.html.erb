@@ -1,9 +1,9 @@
-<h1 class="articles-index-header">Superadmins</h1>
+<h1 class="admins-index-header">Superadmins</h1>
 
 <table>
   <tr>
-    <th class="articles-index-table-headlines">Name</th>
-    <th class="articles-index-table-headlines">Email</th>
+    <th class="admins-index-table-headlines">Name</th>
+    <th class="admins-index-table-headlines">Email</th>
     <th colspan="3">
       <% if can? :create, User %>
       <%= link_to 'New Superadmin', new_superadmin_path, class: 'btn btn-success' %>
@@ -13,7 +13,7 @@
   <% @superadmins.each do |superadmin| %>
   <tr>
     <td><%= superadmin.name %></td>
-    <td class="articles-index-lefty"><%= superadmin.email %></td>
+    <td><%= superadmin.email %></td>
     <% if can? :manage, superadmin %>
     <td><%= link_to 'Show', superadmin_path(superadmin), class: 'btn btn-default' %></td>
     <td><%= link_to 'Edit', edit_superadmin_path(superadmin), class: 'btn btn-default' %></td>

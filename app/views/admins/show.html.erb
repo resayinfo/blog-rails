@@ -1,7 +1,9 @@
-<h1 class="page-header"><%= @admin.name %></h1>
+<div class="admins">
+  <h1 class="page-header"><%= @admin.name %></h1>
 
-<h2 class="page-header"><%= mail_to @admin.email, @admin.email %></h2>
+  <h2 class="page-header"><%= mail_to @admin.email, @admin.email %></h2>
 
-<% if can? :update, @admin %>
-  <p><%= link_to 'back', admins_path(@admins), class: 'btn btn-default' %> &nbsp; <%= link_to 'Edit', edit_admin_path(@admin), class: 'btn btn-default' %> &nbsp; <%= link_to 'Delete', admin_path(@admin) , class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></p>
-<% end %>
+  <% if can? :update, @admin %>
+    <p><%= link_to 'back', admins_path(@admins), class: 'btn btn-default' %> &nbsp; <%= link_to 'Edit', edit_admin_path(@admin), class: 'btn btn-default' %> &nbsp; <%= link_to 'Delete', admin_path(@admin) , class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <% end %>
+</div><!--. admins -->

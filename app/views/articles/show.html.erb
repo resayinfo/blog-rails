@@ -1,30 +1,32 @@
-<h1><%= @article.title %></h1>
-<h1>Created <%= @article.created_at.strftime("%B %-d, %Y") %></h1>
-<h2 class="articles-show-updated-sub-header">Updated <%= @article.updated_at.strftime("%B %-d, %Y") if @article.updated_at.present? %></h2>
+<div class="articles">
+  <h1><%= @article.title %></h1>
+  <h1>Created <%= @article.created_at.strftime("%B %-d, %Y") %></h1>
+  <h2 class="articles-show-updated-sub-header">Updated <%= @article.updated_at.strftime("%B %-d, %Y") if @article.updated_at.present? %></h2>
 
-<h2 class="articles-show-title">
-  <%= @article.title %>
-</h2>
+  <h2 class="articles-show-title">
+    <%= @article.title %>
+  </h2>
 
-<p class="articles-show-lefty">
-  <%= @article.text %>
-</p>
-<!-- <a href="<%= @article.text %>" target="_blank"><%= @article.text %></a> -->
-<!-- <iframe width="940" height="480" src="<%= @article.text %>" frameborder="0" allowfullscreen></iframe> -->
-<table>
-  <tr>
-      <td><%= link_to 'Back', articles_path, class: 'btn btn-default' %></td>
-    <% if can? :manage, Article %>
-      <td><%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-default' %></td>
-      <td><%= link_to 'Delete', article_path(@article) , class: 'btn btn-danger',
-                              method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    <% end %>
-  </tr>
-</table>
+  <p class="articles-show-lefty">
+    <%= @article.text %>
+  </p>
+  <!-- <a href="<%= @article.text %>" target="_blank"><%= @article.text %></a> -->
+  <!-- <iframe width="940" height="480" src="<%= @article.text %>" frameborder="0" allowfullscreen></iframe> -->
+  <table>
+    <tr>
+        <td><%= link_to 'Back', articles_path, class: 'btn btn-default' %></td>
+      <% if can? :manage, Article %>
+        <td><%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-default' %></td>
+        <td><%= link_to 'Delete', article_path(@article) , class: 'btn btn-danger',
+                                method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tr>
+  </table>
 
-<h2 class="comments">Comments</h2>
-  <%= render @article.comments %>
-<% if can? :manage, Comment %>
-  <h3 class="comment">Add a comment:</h3>
-    <%= render "comments/form" %>
-<% end %>
+  <h2 class="comments">Comments</h2>
+    <%= render @article.comments %>
+  <% if can? :manage, Comment %>
+    <h3 class="comment">Add a comment:</h3>
+      <%= render "comments/form" %>
+  <% end %>
+</div><!--. articles -->

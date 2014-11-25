@@ -1,32 +1,34 @@
-<h1 class="articles-index-header">Articles</h1>
+<div class="articles">
+  <h1 class="articles-index-header">Articles</h1>
 
-<% if @articles.present? %>
-  <table>
-    <tr>
-      <th class="articles-index-table-headlines">Title</th>
-      <th class="articles-index-table-headlines">Text</th>
-      <th colspan="3">
-        <% if can? :create, Article %>
-          <%= link_to 'Create a New Article', new_article_path, class: 'btn btn-success' %>
-        <% end %>
-      </th>
-    </tr>
-    <% @articles.each do |article| %>
+  <% if @articles.present? %>
+    <table>
       <tr>
-        <td><%= article.title %></td>
-        <td><%= article.text %></td>
-        <td><%= link_to 'Show', article_path(article), class: 'btn btn-default' %></td>
-        <% if can? :manage, Article %>
-          <td><%= link_to 'Edit', edit_article_path(article), class: 'btn btn-default' %></td>
-          <td><%= link_to 'Delete', article_path(article) , class: 'btn btn-danger',
-                          method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+        <th class="articles-index-table-headlines">Title</th>
+        <th class="articles-index-table-headlines">Text</th>
+        <th colspan="3">
+          <% if can? :create, Article %>
+            <%= link_to 'Create a New Article', new_article_path, class: 'btn btn-success' %>
+          <% end %>
+        </th>
       </tr>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= article.title %></td>
+          <td><%= article.text %></td>
+          <td><%= link_to 'Show', article_path(article), class: 'btn btn-default' %></td>
+          <% if can? :manage, Article %>
+            <td><%= link_to 'Edit', edit_article_path(article), class: 'btn btn-default' %></td>
+            <td><%= link_to 'Delete', article_path(article) , class: 'btn btn-danger',
+                            method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  <% else %>
+    <h1><%= link_to (image_tag 'simpsons.png', class:"articles-index-nothing-yet-pic"), new_article_path %></h1>
+    <% if can? :create, Article %>
+      <h1><%= link_to 'Create a New Article', new_article_path, class: 'btn btn-success' %></h1>
     <% end %>
-  </table>
-<% else %>
-  <h1><%= link_to (image_tag 'simpsons.png', class:"articles-index-nothing-yet-pic"), new_article_path %></h1>
-  <% if can? :create, Article %>
-    <h1><%= link_to 'Create a New Article', new_article_path, class: 'btn btn-success' %></h1>
   <% end %>
-<% end %>
+</div><!--. articles -->

@@ -1,25 +1,27 @@
-<h1 class="admins-index-header">Superadmins</h1>
+<div class="admins">
+  <h1 class="admins-index-header">Superadmins</h1>
 
-<table>
-  <tr>
-    <th class="admins-index-table-headlines">Name</th>
-    <th class="admins-index-table-headlines">Email</th>
-    <th colspan="3">
-      <% if can? :create, User %>
-      <%= link_to 'New Superadmin', new_superadmin_path, class: 'btn btn-success' %>
+  <table>
+    <tr>
+      <th class="admins-index-table-headlines">Name</th>
+      <th class="admins-index-table-headlines">Email</th>
+      <th colspan="3">
+        <% if can? :create, User %>
+        <%= link_to 'New Superadmin', new_superadmin_path, class: 'btn btn-success' %>
+        <% end %>
+      </th>
+    </tr>
+    <% @superadmins.each do |superadmin| %>
+    <tr>
+      <td><%= superadmin.name %></td>
+      <td><%= superadmin.email %></td>
+      <% if can? :manage, superadmin %>
+      <td><%= link_to 'Show', superadmin_path(superadmin), class: 'btn btn-default' %></td>
+      <td><%= link_to 'Edit', edit_superadmin_path(superadmin), class: 'btn btn-default' %></td>
+      <td><%= link_to 'Delete', superadmin_path(superadmin) , class: 'btn btn-danger',
+      method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
-    </th>
-  </tr>
-  <% @superadmins.each do |superadmin| %>
-  <tr>
-    <td><%= superadmin.name %></td>
-    <td><%= superadmin.email %></td>
-    <% if can? :manage, superadmin %>
-    <td><%= link_to 'Show', superadmin_path(superadmin), class: 'btn btn-default' %></td>
-    <td><%= link_to 'Edit', edit_superadmin_path(superadmin), class: 'btn btn-default' %></td>
-    <td><%= link_to 'Delete', superadmin_path(superadmin) , class: 'btn btn-danger',
-    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
-  </tr>
-  <% end %>
-</table>
+  </table>
+</div><!--. admins -->

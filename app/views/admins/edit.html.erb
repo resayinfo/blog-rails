@@ -1,3 +1,5 @@
-<h1 class="page-header">Edit <%= @admin.name %></h1>
+<div class="admins">
+  <h1 class="page-header">Edit <%= @admin.name %></h1>
 
-<%= render partial: 'admins/form', locals: { action: admin_path(@admin) } %>
+  <%= render partial: 'admins/form', locals: { action: admin_path(@admin) } %>
+</div><!--. admins -->

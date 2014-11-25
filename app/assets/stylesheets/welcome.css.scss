@@ -200,6 +200,11 @@ input[type=submit] {
 }
 
 
+.page-header {
+  border-bottom: 1px dashed #eee;
+}
+
+
 /* Footer
 ----------------------------------------------------------------------------- */
 
@@ -277,9 +282,6 @@ input[type=submit] {
   filter: grayscale(100%);
 }
 
-.welcome {
-  margin-top: 12px;
-}
 
 .welcome-pic-1 {
   width: 340px;
@@ -287,7 +289,7 @@ input[type=submit] {
   margin-top: 24px;
   opacity: 0.7;
   float: left;
-  margin-right: 16px;
+  margin-right: 18px;
 }
 
 .welcome-pic-1:hover, .welcome-pic-1 a:hover {

@@ -240,8 +240,6 @@ input[type=submit] {
 }
 
 .welcome-pic-1:hover, .welcome-pic-1 a:hover {
-  width: 340px;
-  height: 240px;
   margin-top: 60px;
   opacity: 0.7;
   background: none;
@@ -255,4 +253,45 @@ input[type=submit] {
   height: 480px;
   margin-top: 60px;
   margin-bottom: 60px;
+}
+
+.bubbles {
+}
+
+.bubbles img {
+  height:240px;
+  width: 240px;
+}
+
+.bubbles ul.bubbles-list {
+  list-style: none;
+  overflow: hidden;
+}
+
+.bubbles ul.bubbles-list li {
+  float: left;
+  padding: 24px 24px 24px 24px;
+  /*
+  border-top: 2px dashed rgb(243, 251,251);
+  border-left: 2px dashed rgb(243, 251,251);
+  */
+}
+
+.bubbles ul.bubbles-list li:nth-child(1),
+.bubbles ul.bubbles-list li:nth-child(2),
+.bubbles ul.bubbles-list li:nth-child(3) {
+  border-top: none;
+}
+
+.bubbles ul.bubbles-list li:nth-child(1),
+.bubbles ul.bubbles-list li:nth-child(4) {
+  border-left: none;
+}
+
+.bubbles a:hover {
+  padding: 3px;
+  background: none;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
 }

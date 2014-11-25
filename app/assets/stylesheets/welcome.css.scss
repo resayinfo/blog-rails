@@ -232,7 +232,7 @@ input[type=submit] {
 
 .wholepage {
   width: 960px;
-  margin:auto;
+  margin: 0 auto;
   background: #000;
   opacity: 0.9;
   padding-bottom: 30px;
@@ -241,8 +241,8 @@ input[type=submit] {
   padding-right: 10px;
 }
 
-.bubbles {
-}
+// .bubbles {
+// }
 
 .bubbles img {
   height:240px;

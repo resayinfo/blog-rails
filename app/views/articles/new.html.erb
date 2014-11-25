@@ -1,7 +1,6 @@
 <div class="articles">
-  <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
-
-  <h2 class="articles-new-sub-header">New Article</h2>
+  <h1 class="page-header" align="center">New Article</h1>
+  <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
 
   <%= render 'form' %>
 </div><!--. articles -->

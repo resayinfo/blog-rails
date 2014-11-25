@@ -1,6 +1,6 @@
 <div class="articles">
-  <h1><%= @article.title %></h1>
-  <h1>Created <%= @article.created_at.strftime("%B %-d, %Y") %></h1>
+  <h1 class="page-header" align="center"><%= @article.title %></h1>
+  <h2>Created <%= @article.created_at.strftime("%B %-d, %Y") %></h2>
   <h2 class="articles-show-updated-sub-header">Updated <%= @article.updated_at.strftime("%B %-d, %Y") if @article.updated_at.present? %></h2>
 
   <h2 class="articles-show-title">

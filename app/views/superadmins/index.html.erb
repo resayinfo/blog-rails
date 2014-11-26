@@ -1,28 +1,32 @@
-<div class="admins">
-  <h1 class="page-header" align="center">Super Admins</h1>
+<% if can? :create, Article %>
+  <div class="admins">
+    <h1 class="page-header" align="center">Super Admins</h1>
 
-  <%= render partial: 'superadmins/search', locals: { q: '' } %>
+    <%= render partial: 'superadmins/search', locals: { q: '' } %>
 
-  <table>
-    <tr>
-      <th class="admins-index-table-headlines">Name</th>
-      <th class="admins-index-table-headlines">Email</th>
-      <% if can? :create, User %>
-        <th colspan="2">
-          <%= link_to 'New Super Admin', new_superadmin_path, class: 'btn btn-success' %>
-        </th>
+    <table>
+      <tr>
+        <th class="admins-index-table-headlines">Name</th>
+        <th class="admins-index-table-headlines">Email</th>
+        <% if can? :create, User %>
+          <th colspan="2">
+            <%= link_to 'New Super Admin', new_superadmin_path, class: 'btn btn-success' %>
+          </th>
+        <% end %>
+      </tr>
+      <% @superadmins.each do |superadmin| %>
+      <tr>
+        <td><%= link_to superadmin.name, superadmin_path(superadmin) %></td>
+        <td><%= mail_to superadmin.email, superadmin.email %></td>
+        <% if can? :manage, superadmin %>
+          <td><%= link_to 'Edit', edit_superadmin_path(superadmin), class: 'btn btn-default' %></td>
+          <td><%= link_to 'Delete', superadmin_path(superadmin) , class: 'btn btn-danger',
+          method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
       <% end %>
-    </tr>
-    <% @superadmins.each do |superadmin| %>
-    <tr>
-      <td><%= link_to superadmin.name, superadmin_path(superadmin) %></td>
-      <td><%= mail_to superadmin.email, superadmin.email %></td>
-      <% if can? :manage, superadmin %>
-        <td><%= link_to 'Edit', edit_superadmin_path(superadmin), class: 'btn btn-default' %></td>
-        <td><%= link_to 'Delete', superadmin_path(superadmin) , class: 'btn btn-danger',
-        method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <% end %>
-    </tr>
-    <% end %>
-  </table>
-</div><!--. admins -->
+    </table>
+  </div><!--. admins -->
+<% else %>
+  <h1 class="page-header" align="center">You are not authorized</h1>
+<% end %>

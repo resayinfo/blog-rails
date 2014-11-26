@@ -1,5 +1,11 @@
-<div class="admins">
-  <h1 class="page-header">Edit <%= @superadmin.name %></h1>
+<% if can? :create, Article %>
 
-  <%= render partial: 'superadmins/form', locals: { action: superadmin_path(@superadmin) } %>
-</div><!--. admins -->
+  <div class="admins">
+    <h1 class="page-header">Edit <%= @superadmin.name %></h1>
+
+    <%= render partial: 'superadmins/form', locals: { action: superadmin_path(@superadmin) } %>
+  </div><!--. admins -->
+
+<% else %>
+  <h1 class="page-header" align="center">You are not authorized</h1>
+<% end %>

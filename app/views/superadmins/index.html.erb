@@ -16,7 +16,7 @@
     <% @superadmins.each do |superadmin| %>
     <tr>
       <td><%= link_to superadmin.name, superadmin_path(superadmin) %></td>
-      <td><%= link_to superadmin.email, superadmin.email %></td>
+      <td><%= mail_to superadmin.email, superadmin.email %></td>
       <% if can? :manage, superadmin %>
         <td><%= link_to 'Edit', edit_superadmin_path(superadmin), class: 'btn btn-default' %></td>
         <td><%= link_to 'Delete', superadmin_path(superadmin) , class: 'btn btn-danger',

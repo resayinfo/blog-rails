@@ -16,7 +16,7 @@
     <% @admins.each do |admin| %>
       <tr>
         <td><%= link_to admin.name, admin_path(admin) %></td>
-        <td><%= link_to admin.email, admin.email %></td>
+        <td><%= mail_to admin.email, admin.email %></td>
         <% if can? :manage, admin %>
           <td><%= link_to 'Edit', edit_admin_path(admin), class: 'btn btn-default' %></td>
           <td><%= link_to 'Delete', admin_path(admin) , class: 'btn btn-danger',

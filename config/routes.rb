@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :articles do
     resources :comments
+    get 'search', on: :collection
   end
 
   resources :admins

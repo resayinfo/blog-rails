@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @articles = Article.all
+    @articles = Article.all.order(:title)
   end
 
   def new
@@ -42,6 +42,17 @@ class ArticlesController < ApplicationController
     @article.destroy
 
     redirect_to articles_path
+  end
+
+  # GET /degrees/search?q=
+  def search
+    @query = params[:q]
+    @articles = []
+    if @query.present?
+      @articles = Article.where("lower(title) LIKE ?", "%#{@query.downcase}%")
+    else
+      @articles = Article.all.order(:title)
+    end
   end
 
   private

@@ -1,0 +1,6 @@
+<form action="<%= search_articles_path %>" method="get">
+  <%= text_field_tag 'q', q, placeholder: 'Search for an article' %>
+  <div class="in-search">
+    <%= submit_tag 'Find Article', title: nil, class: 'btn btn-default' %>
+  </div>
+</form>

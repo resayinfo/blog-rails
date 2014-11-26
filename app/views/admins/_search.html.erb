@@ -1,0 +1,6 @@
+<form action="<%= search_admins_path %>" method="get">
+  <%= text_field_tag 'q', q, placeholder: 'Search by Admin Name' %>
+  <div class="in-search">
+    <%= submit_tag 'Find Admin', name: nil, class: 'btn btn-default' %>
+  </div>
+</form>

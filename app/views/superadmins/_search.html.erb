@@ -1,0 +1,6 @@
+<form action="<%= search_superadmins_path %>" method="get">
+  <%= text_field_tag 'q', q, placeholder: 'Search by Super Admin Name' %>
+  <div class="in-search">
+    <%= submit_tag 'Find Super Admin', name: nil, class: 'btn btn-default' %>
+  </div>
+</form>

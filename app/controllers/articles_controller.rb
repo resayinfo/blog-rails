@@ -44,7 +44,7 @@ class ArticlesController < ApplicationController
     redirect_to articles_path
   end
 
-  # GET /degrees/search?q=
+  # GET /articles/search?q=
   def search
     @query = params[:q]
     @articles = []

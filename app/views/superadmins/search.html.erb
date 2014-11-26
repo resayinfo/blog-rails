@@ -1,0 +1,21 @@
+<div class="admins">
+
+  <br>
+  <%= render partial: 'superadmins/search', locals: { q: @query } %>
+
+  <table>
+    <thead>
+      <tr>
+        <th><h1 class="page-header" align="center">Search results for:<br> "<%= @query %>"</h1></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @superadmins.each do |superadmin| %>
+      <tr>
+        <td><%= link_to superadmin.name, superadmin_path(superadmin) %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div><!--. admins -->

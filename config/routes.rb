@@ -7,9 +7,13 @@ Rails.application.routes.draw do
     get 'search', on: :collection
   end
 
-  resources :admins
+  resources :admins do
+    get 'search', on: :collection
+  end
 
-  resources :superadmins
+  resources :superadmins do
+    get 'search', on: :collection
+  end
 
   root 'welcome#index'
 end

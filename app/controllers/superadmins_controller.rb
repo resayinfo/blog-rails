@@ -58,6 +58,17 @@ class SuperadminsController < ApplicationController
     end
   end
 
+  # GET /superadmins/search?q=
+  def search
+    @query = params[:q]
+    @superadmins = []
+    if @query.present?
+      @superadmins =  User.with_role(:superadmin).where("lower(first_name) LIKE ? OR lower(last_name) LIKE ?", "%#{@query.downcase}%", "%#{@query.downcase}%")
+    else
+      @superadmins = User.with_role(:superadmin).order('users.last_name, users.first_name')
+    end
+  end
+
   private
 
   def superadmin_params

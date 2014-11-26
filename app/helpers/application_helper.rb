@@ -60,13 +60,4 @@ module ApplicationHelper
       ["No", "No"]
     ]
   end
-  def confident_options
-    return [
-      ["Likely", "Likely"],
-      ["Target", "Target"],
-      ["Stretch", "Stretch"],
-      ["High Stretch", "High Stretch"],
-      ["Not Applicable", "Not Applicable"]
-    ]
-  end
 end

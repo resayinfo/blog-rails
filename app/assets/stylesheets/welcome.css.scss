@@ -23,14 +23,14 @@ body {
 
 h1, h2 { font-weight: 500; line-height: 1.7; }
 h1 { font-size: 48px; margin-bottom: 36px; }
-h2 { font-size: 32px; margin-top: 24px; margin-bottom: 16px; }
+h2 { font-size: 32px; margin-bottom: 16px; }
 h3 { font-size: 24px; font-weight: 500; line-height: 24px; }
 h4 { font-size: 18px; margin-bottom: 24px; color: #5b5b5b; }
 
 p { font-size: 16px; line-height: 1.7; margin-bottom: 10px; }
 
 a {
-  color: rgba(0, 255, 0, 0.6);
+  color: rgba(0, 255, 0, 0.7);
   font-weight: bold;
   text-decoration: none;
   padding: 3px;
@@ -50,22 +50,24 @@ h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, th a:hover, td a:hov
 table {
   margin: 0 auto;
   text-align: center;
+  // border: 2px solid white;
 }
 
 th {
-  padding-left: 12px;
-  padding-right: 12px;
-  text-align: center;
+  padding-left: 60px;
+  padding-right: 60px;
   font-family: 'Lobster';
   font-size: 30px;
+  // border: 2px solid white;
 }
 
 td {
   padding-bottom: 30px;
   padding-top: 30px;
-  padding-left: 12px;
-  padding-right: 12px;
-  text-align: left;
+  padding-left: 18px;
+  padding-right: 18px;
+  font-size: 18px;
+  // border: 2px solid white;
 }
 
 
@@ -171,6 +173,7 @@ input[type=submit] {
   width: 960px;
   margin: 0 auto;
   position: absolute;
+  text-align: center;
 }
 
 .dropdown {
@@ -278,9 +281,9 @@ input[type=submit] {
 .bubbles a:hover {
   padding: 3px;
   background: none;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  filter: grayscale(100%);
+  -webkit-filter: sepia(100%);
+  -moz-filter: sepia(100%);
+  filter: sepia(100%);
 }
 
 

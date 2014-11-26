@@ -7,7 +7,7 @@
         <th class="articles-index-table-headlines">Author</th>
         <th class="articles-index-table-headlines">Title</th>
         <!-- <th class="articles-index-table-headlines">Text</th> -->
-        <th colspan="3">
+        <th colspan="2">
           <% if can? :create, Article %>
             <%= link_to 'Create a New Article', new_article_path, class: 'btn btn-success' %>
           <% end %>
@@ -15,10 +15,9 @@
       </tr>
       <% @articles.each do |article| %>
         <tr>
-          <td><%= article.author %></td>
-          <td><%= article.title %></td>
+          <td><%= link_to article.author, article_path(article) %></td>
+          <td><%= link_to article.title, article_path(article) %></td>
           <!-- <td><%= article.text %></td> -->
-          <td><%= link_to 'Show', article_path(article), class: 'btn btn-default' %></td>
           <% if can? :manage, Article %>
             <td><%= link_to 'Edit', edit_article_path(article), class: 'btn btn-default' %></td>
             <td><%= link_to 'Delete', article_path(article) , class: 'btn btn-danger',

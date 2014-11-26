@@ -5,11 +5,11 @@
     <tr>
       <th class="admins-index-table-headlines">Name</th>
       <th class="admins-index-table-headlines">Email</th>
-      <th colspan="3">
-        <% if can? :create, User %>
+      <% if can? :create, User %>
+        <th colspan="3">
           <%= link_to 'New Administrator', new_admin_path, class: 'btn btn-success' %>
-        <% end %>
-      </th>
+        </th>
+      <% end %>
     </tr>
     <% @admins.each do |admin| %>
       <tr>

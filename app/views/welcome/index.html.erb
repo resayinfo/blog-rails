@@ -1,15 +1,12 @@
 <% if current_user.has_role? :god %>
 
   <h1 class="page-header" align="center">Rails Blog</h1>
-
   <div class="articles">
     <%= render partial: 'articles/search', locals: { q: '' } %>
   </div>
-
   <div class="admins">
     <%= render partial: 'admins/search', locals: { q: '' } %>
   </div>
-
   <div class="admins">
     <%= render partial: 'superadmins/search', locals: { q: '' } %>
   </div>
@@ -17,32 +14,27 @@
 <% elsif current_user.has_role? :admin or current_user.has_role? :superadmin %>
 
   <h1 class="page-header" align="center">Rails Blog</h1>
-
   <div class="articles">
     <%= render partial: 'articles/search', locals: { q: '' } %>
   </div>
-
   <%= link_to (image_tag 'simpsons.png', class:'welcome-pic-1'), controller: 'articles' %>
   <p>
     Scientific pitch notation is a logarithmic frequency scale. The octave number increases by 1 upon an ascension from B to C (and not from G to A, as one might expect). Thus "A4" refers to the first A above C4 (middle C). As another example, in ascending the white keys on a keyboard, C4 immediately follows B3, as in the following sequence: "C3 D3 E3 F3 G3 A3 B3 C4 D4". Scientific pitch notation is often used to specify the range of an instrument. It provides an unambiguous means of identifying a note in terms of musical notation rather than frequency, while at the same time avoiding the transposition conventions that are used in writing the music for instruments such as the clarinet and guitar. The conventional octave naming system — where for example C0 is written as ′′C, or C, or CCC in Helmholtz pitch notation, or referred to as subcontra C, and where C4 is written as c′ or one-lined C — applies to the written notes that may or may not be transposed. For example, a d′ played on a B♭ trumpet is actually a C4 in scientific pitch notation. Although pitch notation is intended to describe audible sounds, it can also be used to specify the frequency of non-audible phenomena.
   </p>
+  <iframe title="YouTube video player" src="https://www.youtube.com/embed/a2ClgGJayTs?rel=0" class='welcome-vid-1' frameborder="0" allowfullscreen></iframe>
 
 <% else %>
 
   <h1 class="page-header" align="center">Rails Blog</h1>
-
   <div class="articles">
     <%= render partial: 'articles/search', locals: { q: '' } %>
   </div>
-
   <%= link_to (image_tag 'simpsons.png', class:'welcome-pic-1'), controller: 'articles' %>
   <p>
     Scientific pitch notation is a logarithmic frequency scale. The octave number increases by 1 upon an ascension from B to C (and not from G to A, as one might expect). Thus "A4" refers to the first A above C4 (middle C). As another example, in ascending the white keys on a keyboard, C4 immediately follows B3, as in the following sequence: "C3 D3 E3 F3 G3 A3 B3 C4 D4". Scientific pitch notation is often used to specify the range of an instrument. It provides an unambiguous means of identifying a note in terms of musical notation rather than frequency, while at the same time avoiding the transposition conventions that are used in writing the music for instruments such as the clarinet and guitar. The conventional octave naming system — where for example C0 is written as ′′C, or C, or CCC in Helmholtz pitch notation, or referred to as subcontra C, and where C4 is written as c′ or one-lined C — applies to the written notes that may or may not be transposed. For example, a d′ played on a B♭ trumpet is actually a C4 in scientific pitch notation. Although pitch notation is intended to describe audible sounds, it can also be used to specify the frequency of non-audible phenomena.
   </p>
-
   <iframe title="YouTube video player" src="https://www.youtube.com/embed/a2ClgGJayTs?rel=0" class='welcome-vid-1' frameborder="0" allowfullscreen></iframe>
   <h2 class="page-header">Bubbles</h2>
-
   <div class="bubbles">
     <ul class="bubbles-list">
       <li><a href= "http://www.couriernewjersey.com/tony-php/tony.php" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>

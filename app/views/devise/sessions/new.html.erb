@@ -9,6 +9,12 @@
     <div><%= f.label :password %><br />
       <%= f.password_field :password, autocomplete: "on" %></div>
 
+      <% if devise_mapping.rememberable? -%>
+        <%= f.label :remember_me, class: 'checkbox' do %>
+          <%= f.check_box :remember_me %> Remember me
+        <% end %>
+      <% end -%>
+
     <br><div><%= f.submit "Log in", class: 'btn btn-default' %></div><br>
   <% end %>
 

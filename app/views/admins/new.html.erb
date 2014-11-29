@@ -1,5 +1,13 @@
-<div class="admins">
-  <h1 class="page-header" align="center">New Admin</h1>
+<% if current_user.has_role? :superadmin or current_user.has_role? :god %>
 
-  <%= render partial: 'admins/form', locals: { action: admins_path } %>
-</div><!--. admins -->
+  <div class="admins">
+    <h1 class="page-header" align="center">New Admin</h1>
+
+    <%= render partial: 'admins/form', locals: { action: admins_path } %>
+  </div><!--. admins -->
+
+<% else %>
+
+  <h1 class="page-header" align="center">You are not authorized</h1>
+
+<% end %>

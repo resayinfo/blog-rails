@@ -22,9 +22,14 @@
   height: 240px;
   margin-top: 60px;
   opacity: 0.9;
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  filter: blur(3px);
+  transform: rotate(4deg) scale(0.749) skew(-54deg) translate(0px);
+  -webkit-transform: rotate(4deg) scale(0.749) skew(-54deg) translate(0px);
+  -moz-transform: rotate(4deg) scale(0.749) skew(-54deg) translate(0px);
+  -o-transform: rotate(4deg) scale(0.749) skew(-54deg) translate(0px);
+  -ms-transform: rotate(4deg) scale(0.749) skew(-54deg) translate(0px);
+  // -webkit-filter: blur(3px);
+  // -moz-filter: blur(3px);
+  // filter: blur(3px);
 }
 
 .articles-index-table-headlines {

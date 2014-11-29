@@ -1,9 +1,11 @@
 <div class="articles">
+
   <h1 class="page-header" align="center">Articles</h1>
 
   <%= render partial: 'articles/search', locals: { q: '' } %>
 
   <% if @articles.present? %>
+
     <table>
       <tr>
         <th class="articles-index-table-headlines">Author</th>
@@ -28,10 +30,14 @@
         </tr>
       <% end %>
     </table>
+
   <% else %>
-    <h1><%= link_to (image_tag 'simpsons.png', class:"articles-index-nothing-yet-pic"), new_article_path %></h1>
+
+    <h1><%= image_tag 'simpsons.png', class:"articles-index-nothing-yet-pic" %></h1>
     <% if can? :create, Article %>
       <h1><%= link_to 'Create a New Article', new_article_path, class: 'btn btn-success' %></h1>
     <% end %>
+
   <% end %>
+
 </div><!--. articles -->

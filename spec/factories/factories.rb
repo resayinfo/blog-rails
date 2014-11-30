@@ -29,13 +29,19 @@ FactoryGirl.define do
 
   factory :comment do
     commenter "Moe"
-    comment "Shelbyville"
+    body "Shelbyville"
   end
 
   factory :invalid_article, class: Article do
   end
 
   factory :invalid_comment, class: Comment do
+  end
+
+  factory :invalid_admin, class: User do
+  end
+
+  factory :invalid_superadmin, class: User do
   end
 
 end

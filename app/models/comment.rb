@@ -3,5 +3,5 @@ class Comment < ActiveRecord::Base
   validates :commenter, presence: true,
                     length: { minimum: 2, maximum: 50 }
   validates :body, presence: true,
-                    length: { minimum: 2, maximum: 200 }
+                    length: { minimum: 2, maximum: 500 }
 end

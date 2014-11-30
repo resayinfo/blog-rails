@@ -1,6 +1,6 @@
 <div class="articles">
   <h1 class="page-header" align="center">"<%= @article.title %>"<br>By: <%= @article.author %></h1>
-  <h2 class="articles-show-updated-sub-header">Created <%= @article.created_at.strftime("%B %-d, %Y") %><br>Updated <%= @article.updated_at.strftime("%B %-d, %Y") if @article.updated_at.present? %></h2>
+  <h2 class="articles-show-updated-sub-header">Created <%= @article.created_at.strftime('%Z, %b %-d, %Y, %l:%M %p') %><br>Updated <%= @article.updated_at.strftime('%Z, %b %-d, %Y, %l:%M %p') if @article.updated_at.present? %></h2>
 
   <p class="articles-show-lefty">
     <%= @article.text %>

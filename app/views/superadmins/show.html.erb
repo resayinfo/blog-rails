@@ -1,4 +1,4 @@
-<% if can? :create, Article %>
+<% if current_user.has_role? :god %>
 
   <div class="admins">
     <h1 class="page-header"><%= @superadmin.name %></h1>
@@ -11,5 +11,7 @@
   </div><!--. admins -->
 
 <% else %>
+
   <h1 class="page-header" align="center">You are not authorized</h1>
+
 <% end %>

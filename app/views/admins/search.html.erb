@@ -1,21 +1,29 @@
-<div class="admins">
+<% if current_user.has_role? :superadmin or current_user.has_role? :god %>
 
-  <br>
-  <%= render partial: 'admins/search', locals: { q: @query } %>
+  <div class="admins">
 
-  <table>
-    <thead>
-      <tr>
-        <th><h1 class="page-header" align="center">Search results for:<br> "<%= @query %>"</h1></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @admins.each do |admin| %>
-      <tr>
-        <td><%= link_to admin.name, admin_path(admin) %></td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
+    <br>
+    <%= render partial: 'admins/search', locals: { q: @query } %>
 
-</div><!--. admins -->
+    <table>
+      <thead>
+        <tr>
+          <th><h1 class="page-header" align="center">Search results for:<br> "<%= @query %>"</h1></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @admins.each do |admin| %>
+        <tr>
+          <td><%= link_to admin.name, admin_path(admin) %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div><!--. admins -->
+
+<% else %>
+
+  <h1 class="page-header" align="center">You are not authorized</h1>
+
+<% end %>

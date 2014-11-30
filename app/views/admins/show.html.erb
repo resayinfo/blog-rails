@@ -1,9 +1,17 @@
-<div class="admins">
-  <h1 class="page-header"><%= @admin.name %></h1>
+<% if current_user.has_role? :superadmin or current_user.has_role? :god %>
 
-  <h2 class="page-header"><%= mail_to @admin.email, @admin.email %></h2>
+  <div class="admins">
+    <h1 class="page-header"><%= @admin.name %></h1>
 
-  <% if can? :update, @admin %>
-    <p><%= link_to 'back', admins_path(@admins), class: 'btn btn-default' %> &nbsp; <%= link_to 'Edit', edit_admin_path(@admin), class: 'btn btn-default' %> &nbsp; <%= link_to 'Delete', admin_path(@admin) , class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></p>
-  <% end %>
-</div><!--. admins -->
+    <h2 class="page-header"><%= mail_to @admin.email, @admin.email %></h2>
+
+    <% if can? :update, @admin %>
+      <p><%= link_to 'back', admins_path(@admins), class: 'btn btn-default' %> &nbsp; <%= link_to 'Edit', edit_admin_path(@admin), class: 'btn btn-default' %> &nbsp; <%= link_to 'Delete', admin_path(@admin) , class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <% end %>
+  </div><!--. admins -->
+
+<% else %>
+
+  <h1 class="page-header" align="center">You are not authorized</h1>
+
+<% end %>

@@ -1,4 +1,4 @@
-<% if can? :create, Article %>
+<% if current_user.has_role? :superadmin or current_user.has_role? :god %>
   <div class="admins">
     <h1 class="page-header" align="center">Admins</h1>
 

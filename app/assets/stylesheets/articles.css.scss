@@ -10,26 +10,35 @@
   text-align: center;
 }
 
-.articles-index-nothing-yet-pic {
-  width: 340px;
-  height: 240px;
+.articles-index-nothing-yet-pic-1 {
+  width: 240px;
+  height: 160px;
   margin-top: 60px;
   opacity: 0.9;
+  transform: rotate(0deg) scale(1) skew(-144deg) translate(0px);
+  -webkit-transform: rotate(0deg) scale(1) skew(-150deg) translate(-12px);
+  -moz-transform: rotate(0deg) scale(1) skew(-150deg) translate(-12px);
+  -o-transform: rotate(0deg) scale(1) skew(-150deg) translate(-12px);
+  -ms-transform: rotate(0deg) scale(1) skew(-150deg) translate(-12px);
+  margin-right: 60px;
 }
 
-.articles-index-nothing-yet-pic:hover, .articles-index-nothing-yet-pic a:hover {
-  width: 340px;
-  height: 240px;
+.articles-index-nothing-yet-pic-2 {
+  width: 240px;
+  height: 160px;
   margin-top: 60px;
   opacity: 0.9;
-  transform: rotate(4deg) scale(0.749) skew(-54deg) translate(0px);
-  -webkit-transform: rotate(4deg) scale(0.749) skew(-54deg) translate(0px);
-  -moz-transform: rotate(4deg) scale(0.749) skew(-54deg) translate(0px);
-  -o-transform: rotate(4deg) scale(0.749) skew(-54deg) translate(0px);
-  -ms-transform: rotate(4deg) scale(0.749) skew(-54deg) translate(0px);
-  // -webkit-filter: blur(3px);
-  // -moz-filter: blur(3px);
-  // filter: blur(3px);
+  transform: rotate(0deg) scale(1) skew(147deg) translate(0px);
+  -webkit-transform: rotate(0deg) scale(1) skew(150deg) translate(12px);
+  -moz-transform: rotate(0deg) scale(1) skew(150deg) translate(12px);
+  -o-transform: rotate(0deg) scale(1) skew(150deg) translate(12px);
+  -ms-transform: rotate(0deg) scale(1) skew(150deg) translate(12px);
+}
+
+.articles-index-nothing-yet-pic-1:hover, .articles-index-nothing-yet-pic-1 a:hover, .articles-index-nothing-yet-pic-2:hover, .articles-index-nothing-yet-pic-2 a:hover {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  filter: blur(3px);
 }
 
 .articles-index-table-headlines {

@@ -15,19 +15,22 @@ body {
   background-size: cover;
   color: #FFFFFF;
   font-family: "Nunito";
+  line-height: 1.7;
 }
 
 
 /* Typography
 ----------------------------------------------------------------------------- */
 
-h1, h2 { font-weight: 500; line-height: 1.7; }
-h1 { font-size: 48px; margin-bottom: 36px; }
-h2 { font-size: 32px; margin-bottom: 16px; }
-h3 { font-size: 24px; font-weight: 500; line-height: 24px; }
-h4 { font-size: 18px; margin-bottom: 24px; color: #5b5b5b; }
+h1, h2 { font-weight: 500; }
+h1 { font-size: 48px; margin-bottom: 32px; }
+h2 { font-size: 32px; margin-bottom: 24px; }
+h3 { font-size: 24px; margin-bottom: 18px; }
+h4 { font-size: 18px; margin-bottom: 15px; }
+h5 { font-size: 15px; margin-bottom: 12px; }
+h6 { font-size: 12px; margin-bottom: 12px; }
 
-p { font-size: 16px; line-height: 1.7; margin-bottom: 10px; }
+p { font-size: 18px; margin-bottom: 12px; }
 
 a {
   color: rgba(0, 255, 0, 0.7);

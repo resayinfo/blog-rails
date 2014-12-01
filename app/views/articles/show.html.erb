@@ -8,7 +8,7 @@
 
   <table>
     <tr>
-      <% if can? :manage, Article %>
+      <% if current_user.has_role? :superadmin or current_user.has_role? :god %>
         <td><%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-default' %></td>
         <td><%= link_to 'Delete', article_path(@article) , class: 'btn btn-danger',
                                 method: :delete, data: { confirm: 'Are you sure?' } %></td>

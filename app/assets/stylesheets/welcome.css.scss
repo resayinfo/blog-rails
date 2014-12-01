@@ -200,7 +200,7 @@ input[type=checkbox] {
 ----------------------------------------------------------------------------- */
 
 .container-fluid {
-  background: rgba(118, 47, 158, 0.2);
+  background: rgba(77, 87, 97, 0.3);
   font-size: 16px;
 }
 
@@ -224,17 +224,17 @@ input[type=checkbox] {
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
-  background: rgba(0,0,0, 0.3);
-  color: rgba(251, 251, 251, 0.9);
+  background: rgba(7,7,7, 0.9);
+  color: #FFFFFF;
 }
 
 .navbar-inverse .navbar-nav>.active>a {
-  background: rgba(0,0,0, 0.3);
+  background: rgba(7,7,7, 0.9);
   color: #FFFFFF;
 }
 
 .navbar-inverse .navbar-nav>.active>a:hover {
-  background: rgba(0,0,0, 0.3);
+  background: rgba(7,7,7, 0.9);
   color: #FFFFFF;
 }
 

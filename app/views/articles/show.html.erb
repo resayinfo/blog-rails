@@ -17,12 +17,12 @@
   </table>
 
   <h2 class="comments">Comments</h2>
-    <%= render @article.comments %>
+  <%= render @article.comments %>
   <% if can? :manage, Comment %>
     <h3 class="comment">Add a comment:</h3>
     <%= render "comments/form" %>
   <% end %>
 </div><!--. articles -->
 
-<!-- <a href="<%= @article.text %>" target="_blank"><%= @article.text %></a> -->
-<!-- <iframe width="940" height="480" src="<%= @article.text %>" frameborder="0" allowfullscreen></iframe> -->
+<!-- <a href="<%= @article.text %>" target="_blank"><%#= @article.text %></a> -->
+<!-- <iframe width="940" height="480" src="<%#= @article.text %>" frameborder="0" allowfullscreen></iframe> -->

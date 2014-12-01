@@ -11,7 +11,18 @@
     <%= render partial: 'superadmins/search', locals: { q: '' } %>
   </div>
 
-<% elsif current_user.has_role? :admin or current_user.has_role? :superadmin %>
+<% elsif current_user.has_role? :superadmin %>
+
+  <h1 class="page-header" align="center">Rails Blog</h1>
+  <div class="articles">
+    <%= render partial: 'articles/search', locals: { q: '' } %>
+  </div>
+  <div class="admins">
+    <%= render partial: 'admins/search', locals: { q: '' } %>
+  </div>
+  <iframe title="YouTube video player" src="https://www.youtube.com/embed/a2ClgGJayTs?rel=0" class='welcome-vid-1' frameborder="0" allowfullscreen></iframe>
+
+<% elsif current_user.has_role? :admin %>
 
   <h1 class="page-header" align="center">Rails Blog</h1>
   <div class="articles">

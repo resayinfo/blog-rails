@@ -146,6 +146,22 @@ input[type=checkbox] {
 /* Buttons (Bootstrap)
 ----------------------------------------------------------------------------- */
 
+.btn {
+  border:solid 3px rgba(7,7,7,0.9);
+  -moz-border-radius-topleft: 48px;
+  -moz-border-radius-topright:49px;
+  -moz-border-radius-bottomleft:48px;
+  -moz-border-radius-bottomright:47px;
+  -webkit-border-top-left-radius:48px;
+  -webkit-border-top-right-radius:49px;
+  -webkit-border-bottom-left-radius:48px;
+  -webkit-border-bottom-right-radius:47px;
+  border-top-left-radius:48px;
+  border-top-right-radius:49px;
+  border-bottom-left-radius:48px;
+  border-bottom-right-radius:47px;
+}
+
 .btn-primary {
   background-color: rgba(48, 249, 185, 0.4);
   border-color: rgba(7,7,7,0.9);

@@ -115,11 +115,16 @@ input, input[type="password"], input[type="search"] {
 
 input[type=submit] {
   width: 200px;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-color: rgba(255, 255, 255, 0.7);
-  // -webkit-box-shadow: inset 1px 1px 1px 1px rgba(118, 47, 158, 0.1);
-  // -moz-box-shadow: inset 1px 1px 1px 1px rgba(118, 47, 158, 0.1);
-  // box-shadow: inset 1px 1px 1px 1px rgba(118, 47, 158, 0.1);
+  background:-webkit-gradient(linear, 31% 53%, 84% 21%, from(#4B24A4), to(#39815E));
+  border-color: rgba(7,7,7,0.9);
+  color: rgb(237,251,251);
+}
+
+input[type=submit]:hover {
+  width: 200px;
+  background:-webkit-gradient(linear, 55% 60%, 33% 21%, from(#43222E), to(#1A81B6));
+  border-color: rgba(7,7,7,0.9);
+  color: rgb(237,251,251);
 }
 
 input[type=checkbox] {
@@ -143,12 +148,12 @@ input[type=checkbox] {
 
 .btn-primary {
   background-color: rgba(48, 249, 185, 0.4);
-  border-color: rgba(48, 249, 185, 0.4);
+  border-color: rgba(7,7,7,0.9);
 }
 
 .btn-primary:hover {
   background-color: rgba(48, 249, 185, 0.6);
-  border-color: rgba(48, 249, 185, 0.6);
+  border-color: rgba(7,7,7,0.9);
 }
 
 .btn-success {
@@ -159,33 +164,33 @@ input[type=checkbox] {
 }
 
 .btn-success:hover {
-  background:-webkit-gradient(linear, 55% 60%, 33% 21%, from(#930D11), to(#2681A3));
+  background:-webkit-gradient(linear, 35% 56%, 60% 50%, from(#D9B064), to(#684B6A));
   border-color: rgba(7,7,7,0.9);
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .btn-danger {
-  background-color: rgba(255, 28, 98, 0.4);
-  border-color: rgba(255, 28, 98, 0.4);
+  background:-webkit-gradient(linear, 38% 78%, 75% 54%, from(#D90B2C), to(#E3557A));
+  border-color: rgba(7,7,7,0.9);
 }
 
 .btn-danger:hover {
-  background-color: rgba(255, 28, 98, 0.6);
-  border-color: rgba(255, 28, 98, 0.6);
+  background:-webkit-gradient(linear, 38% 38%, 75% 54%, from(#D9472A), to(#E3B44F));
+  border-color: rgba(7,7,7,0.9);
 }
 
 .btn-default {
-  background-color: rgba(255, 255, 255, 0.6);
-  border-color: rgba(255, 255, 255, 0.6);
-  color: #000;
+  background:-webkit-gradient(linear, 38% 38%, 75% 89%, from(#476685), to(#1E3B70));
+  border-color: rgba(7,7,7,0.9);
+  color: #FFFFFF;
   font-weight: 700;
 }
 
 .btn-default:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-color: rgba(255, 255, 255, 0.8);
-  color: #000;
+  background:-webkit-gradient(linear, 35% 56%, 60% 50%, from(#3F9774), to(#688DBA));
+  border-color: rgba(7,7,7,0.9);
+  color: #FFFFFF;
   font-weight: 700;
 }
 

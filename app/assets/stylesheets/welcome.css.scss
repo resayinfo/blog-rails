@@ -88,9 +88,6 @@ textarea {
   outline:none;
   background-color: rgba(253,251,253,0.3);
   color: #FFFFFF;
-  // -webkit-box-shadow: inset 2px 2px 2px 2px rgba(118, 47, 158, 0.2);
-  // -moz-box-shadow: inset 2px 2px 2px 2px rgba(118, 47, 158, 0.2);
-  // box-shadow: inset 2px 2px 2px 2px rgba(118, 47, 158, 0.2);
 }
 
 input, input[type="password"], input[type="search"] {
@@ -103,9 +100,6 @@ input, input[type="password"], input[type="search"] {
   color: #FFFFFF;
   font-size: 18px;
   font-weight: 600;
-  // -webkit-box-shadow: inset 1px 1px 1px 1px rgba(118, 47, 158, 0.2);
-  // -moz-box-shadow: inset 1px 1px 1px 1px rgba(118, 47, 158, 0.2);
-  // box-shadow: inset 1px 1px 1px 1px rgba(118, 47, 158, 0.2);
 }
 
 .in-search {

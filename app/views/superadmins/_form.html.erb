@@ -1,5 +1,4 @@
-
-<%= form_for @superadmin, url: action, html: { class: 'form-horizontal' } do |f| %>
+<%= form_for @superadmin, url: action do |f| %>
 
 <% if @superadmin.errors.any? %>
 <div class="alert alert-danger">

@@ -1,4 +1,4 @@
-rails-blog
+Blog-Ruby-On-Rails
 ==========
 
 

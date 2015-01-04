@@ -56,7 +56,7 @@ table {
 th {
   padding-left: 120px;
   padding-right: 120px;
-  font-family: 'Lobster';
+  font-family: 'Happy Monkey';
   font-size: 30px;
   // border: 2px solid white;
 }
@@ -99,11 +99,6 @@ input, input[type="password"], input[type="search"] {
   font-weight: 600;
 }
 
-.in-search {
-  margin-top: 18px;
-  margin-bottom: 36px;
-}
-
 input[type=submit] {
   width: 200px;
   outline:none;
@@ -124,6 +119,16 @@ input[type=checkbox] {
   width: 160px;
 }
 
+label {
+  font-family: "Patrick Hand SC";
+}
+
+
+.in-search {
+  margin-top: 18px;
+  margin-bottom: 36px;
+}
+
 
 /* Buttons (Bootstrap)
 ----------------------------------------------------------------------------- */
@@ -142,11 +147,13 @@ input[type=checkbox] {
   border-top-right-radius:49px;
   border-bottom-left-radius:48px;
   border-bottom-right-radius:47px;
+  font-family: "Patrick Hand SC";
+  font-size: 18px;
 }
 
 .btn-success {
-  background:-webkit-gradient(linear, 51% 13%, 87% 85%, from(#5930D9), to(#4D87DF));
-  color: rgba(255, 255, 137, 1);
+  background:-webkit-gradient(linear, 53% 52%, 54% 57%, from(#32247E), to(#3B4581));
+  color: #FFFFFF;
   font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
   transform: rotate(0deg) scale(0.97) skew(1deg) translate(0px);
@@ -154,10 +161,11 @@ input[type=checkbox] {
   -moz-transform: rotate(0deg) scale(0.97) skew(1deg) translate(0px);
   -o-transform: rotate(0deg) scale(0.97) skew(1deg) translate(0px);
   -ms-transform: rotate(0deg) scale(0.77) skew(1deg) translate(0px);
+  font-family: "Patrick Hand SC";
 }
 
 .btn-success:hover {
-  color: rgba(255, 255, 137, 1);
+  color: #FFFFFF;
   transition:All 1s ease;
   -webkit-transition:All 1s ease;
   -moz-transition:All 1s ease;
@@ -167,7 +175,7 @@ input[type=checkbox] {
   -moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
   -o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
   -ms-transform: rotate(4deg) scale(1) skew(1deg) translate(10px);
-  background:-webkit-gradient(linear, 44% 13%, 21% 85%, from(#5930D9), to(#4D87DF));
+  background:-webkit-gradient(linear, 54% 70%, 54% 20%, from(#32247E), to(#3B4581));
   border-color: rgba(7,7,7,0.9);
 }
 
@@ -223,6 +231,7 @@ input[type=checkbox] {
   position: absolute;
   text-align: center;
   background: rgba(77, 87, 97, 0.3);
+  font-family: 'Cinzel';
 }
 
 .container-fluid {
@@ -257,6 +266,7 @@ input[type=checkbox] {
 
 .page-header {
   border-bottom: 1px solid #FFFFFF;
+  font-family: 'Cinzel';
 }
 
 

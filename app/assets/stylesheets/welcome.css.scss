@@ -267,15 +267,33 @@ input[type=checkbox] {
 
 .footer {
   text-align: center;
+  width: 960px;
 }
 
 .footer p {
-  width: 960px;
   margin: 0 auto;
   font-family: "Lobster";
   color: #FFFFFF;
   padding-top: 6px;
   padding-bottom: 12px;
+}
+
+.footer img {
+  float: right;
+  margin-left:10px;
+  margin-bottom:30px;
+  height:60px;
+  width: 60px;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.footer img:hover {
+  background: none;
+  -webkit-filter: saturate(200%);
+  -moz-filter: saturate(200%);
+  filter: saturate(200%);
 }
 
 .social {
@@ -352,9 +370,9 @@ input[type=checkbox] {
 .welcome-pic-1:hover, .welcome-pic-1 a:hover {
   opacity: 1.0;
   background: none;
-  -webkit-filter: grayscale(100%);
-  -moz-filter: grayscale(100%);
-  filter: grayscale(100%);
+  -webkit-filter: hue-rotate(180deg);
+  -moz-filter: hue-rotate(180deg);
+  filter: hue-rotate(180deg);
 }
 
 .welcome-vid-1 {

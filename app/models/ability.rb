@@ -34,10 +34,9 @@ class Ability
       can :manage, :all
 
     elsif user.has_role? :superadmin
-      can :manage, Article
-      can :manage, Comment
-      can :manage, User
-
+      can :manage, :all
+      # ..except other superadmins because of "if current_user.has_role? :god" in 'superadmins/new.html.erb'
+      
     elsif user.has_role? :admin
       can :read, Article
       can :manage, Comment

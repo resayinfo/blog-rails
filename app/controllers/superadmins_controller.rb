@@ -1,9 +1,16 @@
 class SuperadminsController < ApplicationController
-  before_action :authenticate_user!
-  load_and_authorize_resource :superadmin, class: 'User'
+  # before_action :authenticate_user!
+  # load_and_authorize_resource :superadmin, class: 'User'
+
+  before_action :cancan_rails4_hack
+  load_and_authorize_resource :superadmin, class: User.with_role(:superadmin)
+
+  def cancan_rails4_hack
+    @superadmin = User.new
+  end
 
   def index
-    @superadmins = User.with_role(:superadmin).order('users.last_name, users.first_name')
+    @superadmin = User.with_role(:superadmin).order('users.last_name, users.first_name')
   end
 
   def show

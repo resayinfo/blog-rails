@@ -1,9 +1,16 @@
 class AdminsController < ApplicationController
-  before_action :authenticate_user!
-  load_and_authorize_resource :admin, class: 'User'
+  # before_action :authenticate_user!
+  # load_and_authorize_resource :admin, class: 'User'
+
+  before_action :cancan_rails4_hack
+  load_and_authorize_resource :admin, class: User.with_role(:admin)
+
+  def cancan_rails4_hack
+    @admin = User.new
+  end
 
   def index
-    @admins = User.with_role(:admin).order('users.last_name, users.first_name')
+    @admin = User.with_role(:admin).order('users.last_name, users.first_name')
   end
 
   def show

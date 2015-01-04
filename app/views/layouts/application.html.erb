@@ -11,12 +11,12 @@
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
   <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
   <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-  <meta name="viewport" content="width=980">
+  <meta name="viewport" content="width=1200">
 
 </head>
 <body>
 
-  <div class="nine-eighty">
+  <div class="view">
 
     <% if user_signed_in? %>
 
@@ -50,40 +50,40 @@
 
     <%= yield %>
 
-  </div><!-- nine-eighty -->
+    <div class="social">
+      <iframe src='http://www.facebook.com/plugins/like.php?href=https://www.facebook.com/monmouthcourier&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=120' scrolling='no' frameborder='0' style='border:none; overflow:hidden; height:120px;' allowTransparency='true'></iframe>
+      <g:plusone></g:plusone>
+    </div><!-- social -->
 
-  <div class="social">
-    <iframe src='http://www.facebook.com/plugins/like.php?href=https://www.facebook.com/monmouthcourier&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=120' scrolling='no' frameborder='0' style='border:none; overflow:hidden; height:120px;' allowTransparency='true'></iframe>
-    <g:plusone></g:plusone>
-  </div><!-- social -->
+    <div class="footer">
+      <a href="tel:732-513-6080">
+        <%= image_tag 'phone.png' %>
+      </a>
+      <a href="mailto:ajmaseda@gmail.com">
+        <%= image_tag 'email.png' %>
+      </a>
+      <a href="https://www.facebook.com/anthony.maseda" target = "blank">
+        <%= image_tag 'facebook.png' %>
+      </a>
+      <a href="http://instagram.com/tony_maseda/" target = "blank">
+        <%= image_tag 'instagram.png' %>
+      </a>
+      <a href="https://www.youtube.com/channel/UCxR1elfy91jLjkdI5FbG2Fg" target = "blank">
+        <%= image_tag 'youtube.png' %>
+      </a>
+      <a href="https://twitter.com/AnthonyMaseda" target = "blank">
+        <%= image_tag 'twitter.png' %>
+      </a>
+      <a href="https://www.linkedin.com/profile/view?id=164611762&trk=nav_responsive_tab_profile" target = "blank">
+        <%= image_tag 'linkedin.png' %>
+      </a>
+      <a href="https://github.com/CMBmaseda" target="_blank">
+        <%= image_tag 'github.png' %>
+      </a>
+      <p>&copy; 2014 / All Rights Reserved</p>
+    </div><!--. footer -->
 
-  <div class="footer">
-    <p>&copy; 2014 / All Rights Reserved</p>
-    <a href="tel:732-513-6080">
-      <%= image_tag 'phone.png' %>
-    </a>
-    <a href="mailto:ajmaseda@gmail.com">
-      <%= image_tag 'email.png' %>
-    </a>
-    <a href="https://www.facebook.com/anthony.maseda" target = "blank">
-      <%= image_tag 'facebook.png' %>
-    </a>
-    <a href="http://instagram.com/tony_maseda/" target = "blank">
-      <%= image_tag 'instagram.png' %>
-    </a>
-    <a href="https://www.youtube.com/channel/UCxR1elfy91jLjkdI5FbG2Fg" target = "blank">
-      <%= image_tag 'youtube.png' %>
-    </a>
-    <a href="https://twitter.com/AnthonyMaseda" target = "blank">
-      <%= image_tag 'twitter.png' %>
-    </a>
-    <a href="https://www.linkedin.com/profile/view?id=164611762&trk=nav_responsive_tab_profile" target = "blank">
-      <%= image_tag 'linkedin.png' %>
-    </a>
-    <a href="https://github.com/CMBmaseda" target="_blank">
-      <%= image_tag 'github.png' %>
-    </a>
-  </div><!--. footer -->
+  </div><!-- view -->
 
 </body>
 </html>

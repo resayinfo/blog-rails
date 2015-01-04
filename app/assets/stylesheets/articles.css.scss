@@ -41,6 +41,34 @@
   filter: blur(3px);
 }
 
+.advertisement-pic {
+  width: 240px;
+  height: 120px;
+  opacity: 1.0;
+  background: none;
+  -webkit-filter: hue-rotate(90deg);
+  -moz-filter: hue-rotate(90deg);
+  filter: hue-rotate(90deg);
+}
+
+.advertisement-pic:hover {
+  -webkit-animation: cssAnimation 4.3348s 1 ease;
+  -moz-animation: cssAnimation 4.3348s 1 ease;
+  -o-animation: cssAnimation 4.3348s 1 ease;
+}
+@-webkit-keyframes cssAnimation {
+  from { -webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+  to { -webkit-transform: rotate(350deg) scale(0.806) skew(-3deg) translate(-9px); }
+}
+@-moz-keyframes cssAnimation {
+  from { -moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+  to { -moz-transform: rotate(350deg) scale(0.806) skew(-3deg) translate(-9px); }
+}
+@-o-keyframes cssAnimation {
+  from { -o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
+  to { -o-transform: rotate(350deg) scale(0.806) skew(-3deg) translate(-9px); }
+}
+
 .articles-index-table-headlines {
   color: rgb(77, 87, 97);
 }
@@ -96,5 +124,5 @@
 @-o-keyframes cssAnimation {
   from { -o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
   to { -o-transform: rotate(350deg) scale(0.806) skew(-3deg) translate(-9px); }
-  
+
 }

@@ -20,6 +20,9 @@
   -moz-transform: rotate(0deg) scale(1) skew(-150deg) translate(0px);
   -o-transform: rotate(0deg) scale(1) skew(-150deg) translate(0px);
   -ms-transform: rotate(0deg) scale(1) skew(-150deg) translate(0px);
+  -webkit-filter: hue-rotate(150deg);
+  -moz-filter: hue-rotate(150deg);
+  filter: hue-rotate(150deg);
 }
 
 .articles-index-nothing-yet-pic-2 {
@@ -33,6 +36,9 @@
   -o-transform: rotate(0deg) scale(1) skew(150deg) translate(0px);
   -ms-transform: rotate(0deg) scale(1) skew(150deg) translate(0px);
   margin-left: 120px;
+  -webkit-filter: hue-rotate(240deg);
+  -moz-filter: hue-rotate(240deg);
+  filter: hue-rotate(240deg);
 }
 
 .articles-index-nothing-yet-pic-1:hover, .articles-index-nothing-yet-pic-1 a:hover, .articles-index-nothing-yet-pic-2:hover, .articles-index-nothing-yet-pic-2 a:hover {
@@ -41,9 +47,9 @@
   filter: blur(3px);
 }
 
-.advertisement-pic {
-  width: 240px;
-  height: 120px;
+.side-pic {
+  width: 270px;
+  height: 140px;
   opacity: 1.0;
   background: none;
   -webkit-filter: hue-rotate(90deg);
@@ -51,7 +57,10 @@
   filter: hue-rotate(90deg);
 }
 
-.advertisement-pic:hover {
+.side-pic:hover {
+  -webkit-filter: hue-rotate(300deg);
+  -moz-filter: hue-rotate(300deg);
+  filter: hue-rotate(300deg);
   -webkit-animation: cssAnimation 4.3348s 1 ease;
   -moz-animation: cssAnimation 4.3348s 1 ease;
   -o-animation: cssAnimation 4.3348s 1 ease;

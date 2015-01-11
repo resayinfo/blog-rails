@@ -28,7 +28,7 @@
             <% if can? :manage, Article %>
               <li class="<%= controller.class == AdminsController  || controller.class == AdminsController || controller.class == AdminsController ? 'active' : '' %>"><%= link_to 'Admins', admins_path, class: 'navbar-brand' %></li>
             <% end %>
-            <% if can? :manage, :all %>
+            <% if can? :manage, :superadmin %>
               <li class="<%= controller.class == SuperadminsController  || controller.class == SuperadminsController || controller.class == SuperadminsController ? 'active' : '' %>"><%= link_to 'Supers', superadmins_path, class: 'navbar-brand' %></li>
             <% end %>
           </ul><!-- nav navbar-nav navbar-left -->

@@ -1,40 +1,152 @@
 <% if current_user.has_role? :god %>
 
   <h1 class="page-header" align="center">Rails Blog</h1>
+
+  <h2 class="page-header">Articles</h2>
   <div class="articles">
     <%= render partial: 'articles/search', locals: { q: '' } %>
   </div>
-  <div class="admins">
-    <%= render partial: 'admins/search', locals: { q: '' } %>
-  </div>
+  <table>
+    <tr>
+      <th class="articles-index-table-headlines">Author</th>
+      <th class="articles-index-table-headlines">Title</th>
+      <th colspan="2">
+        <%= link_to 'Create a New Article', new_article_path, class: 'btn btn-success' %>
+      </th>
+    </tr>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.author %></td>
+        <td><%= link_to article.title, article_path(article) %></td>
+        <td><%= link_to 'Edit', edit_article_path(article), class: 'btn btn-default' %></td>
+        <td><%= link_to 'Delete', article_path(article) , class: 'btn btn-danger',
+        method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <h2 class="page-header">Super Admins</h2>
   <div class="admins">
     <%= render partial: 'superadmins/search', locals: { q: '' } %>
   </div>
+  <table>
+    <tr>
+      <th class="admins-index-table-headlines">Name</th>
+      <th class="admins-index-table-headlines">Email</th>
+      <th colspan="2">
+        <%= link_to 'New Super Admins', new_superadmin_path, class: 'btn btn-success' %>
+      </th>
+    </tr>
+    <% @superadmins.each do |superadmin| %>
+      <tr>
+        <td><%= link_to superadmin.name, superadmin_path(superadmin) %></td>
+        <td><%= mail_to superadmin.email, superadmin.email %></td>
+        <td><%= link_to 'Edit', edit_superadmin_path(superadmin), class: 'btn btn-default' %></td>
+        <td><%= link_to 'Delete', superadmin_path(superadmin) , class: 'btn btn-danger',
+        method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
 
-<% elsif current_user.has_role? :superadmin %>
-
-  <h1 class="page-header" align="center">Rails Blog</h1>
-  <div class="articles">
-    <%= render partial: 'articles/search', locals: { q: '' } %>
-  </div>
+  <h2 class="page-header">Admins</h2>
   <div class="admins">
     <%= render partial: 'admins/search', locals: { q: '' } %>
   </div>
-  <iframe title="YouTube video player" src="https://www.youtube.com/embed/uNE9O9xFmXY?rel=0" class='welcome-vid-1' frameborder="0" allowfullscreen></iframe>
+  <table>
+    <tr>
+      <th class="admins-index-table-headlines">Name</th>
+      <th class="admins-index-table-headlines">Email</th>
+      <th colspan="2">
+        <%= link_to 'New Administrator', new_admin_path, class: 'btn btn-success' %>
+      </th>
+    </tr>
+    <% @admins.each do |admin| %>
+      <tr>
+        <td><%= link_to admin.name, admin_path(admin) %></td>
+        <td><%= mail_to admin.email, admin.email %></td>
+        <td><%= link_to 'Edit', edit_admin_path(admin), class: 'btn btn-default' %></td>
+        <td><%= link_to 'Delete', admin_path(admin) , class: 'btn btn-danger',
+        method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
 
-<% elsif current_user.has_role? :admin %>
+  <h2 class="page-header">Users</h2>
+  <table>
+    <tr>
+      <th class="admins-index-table-headlines">Name</th>
+      <th class="admins-index-table-headlines">Email</th>
+      <th class="admins-index-table-headlines">Terminate</th>
+    </tr>
+    <% @users.each do |user| %>
+      <tr>
+        <% if user.has_role? :admin or user.has_role? :superadmin or user.has_role? :god %>
+        <% else %>
+          <td><%= user.name %></td>
+          <td><%= mail_to user.email, user.email %></td>
+          <td><%= link_to 'Delete', admin_path(user) , class: 'btn btn-danger',
+          method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+      </tr>
+    <% end %>
+  </table>
+
+
+<% elsif current_user.has_role? :superadmin %>
+
 
   <h1 class="page-header" align="center">Rails Blog</h1>
+
   <div class="articles">
     <%= render partial: 'articles/search', locals: { q: '' } %>
   </div>
-  <%= link_to (image_tag 'simpsons.png', class:'welcome-pic-1'), controller: 'articles' %>
-  <p>
-    Scientific pitch notation is a logarithmic frequency scale. The octave number increases by 1 upon an ascension from B to C (and not from G to A, as one might expect). Thus "A4" refers to the first A above C4 (middle C). As another example, in ascending the white keys on a keyboard, C4 immediately follows B3, as in the following sequence: "C3 D3 E3 F3 G3 A3 B3 C4 D4". Scientific pitch notation is often used to specify the range of an instrument. It provides an unambiguous means of identifying a note in terms of musical notation rather than frequency, while at the same time avoiding the transposition conventions that are used in writing the music for instruments such as the clarinet and guitar. The conventional octave naming system — where for example C0 is written as ′′C, or C, or CCC in Helmholtz pitch notation, or referred to as subcontra C, and where C4 is written as c′ or one-lined C — applies to the written notes that may or may not be transposed. For example, a d′ played on a B♭ trumpet is actually a C4 in scientific pitch notation. Although pitch notation is intended to describe audible sounds, it can also be used to specify the frequency of non-audible phenomena.
-  </p>
-  <iframe title="YouTube video player" src="https://www.youtube.com/embed/uNE9O9xFmXY?rel=0" class='welcome-vid-1' frameborder="0" allowfullscreen></iframe>
+
+  <h2 class="page-header">Admins</h2>
+  <div class="admins">
+    <%= render partial: 'admins/search', locals: { q: '' } %>
+  </div>
+  <table>
+    <tr>
+      <th class="admins-index-table-headlines">Name</th>
+      <th class="admins-index-table-headlines">Email</th>
+      <th colspan="2">
+        <%= link_to 'New Administrator', new_admin_path, class: 'btn btn-success' %>
+      </th>
+    </tr>
+    <% @admins.each do |admin| %>
+    <tr>
+      <td><%= link_to admin.name, admin_path(admin) %></td>
+      <td><%= mail_to admin.email, admin.email %></td>
+      <td><%= link_to 'Edit', edit_admin_path(admin), class: 'btn btn-default' %></td>
+      <td><%= link_to 'Delete', admin_path(admin) , class: 'btn btn-danger',
+      method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </table>
+
+  <h2 class="page-header">Users</h2>
+  <table>
+    <tr>
+      <th class="admins-index-table-headlines">Name</th>
+      <th class="admins-index-table-headlines">Email</th>
+      <th class="admins-index-table-headlines">Terminate</th>
+    </tr>
+    <% @users.each do |user| %>
+    <tr>
+      <% if user.has_role? :admin or user.has_role? :superadmin or user.has_role? :god %>
+      <% else %>
+      <td><%= user.name %></td>
+      <td><%= mail_to user.email, user.email %></td>
+      <td><%= link_to 'Delete', admin_path(user) , class: 'btn btn-danger',
+      method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tr>
+    <% end %>
+  </table>
+
 
 <% else %>
+
 
   <h1 class="page-header" align="center">Rails Blog</h1>
   <div class="articles">

@@ -36,14 +36,30 @@
       <% end %>
     </table>
 
+
   <% else %>
 
+
     <h1><%= image_tag 'simpsons.png', class:"articles-index-nothing-yet-pic-1" %> <%= image_tag 'simpsons.png', class:"articles-index-nothing-yet-pic-2" %></h1>
+
     <% if can? :create, Article %>
       <h1 class="spinner">
         <%= link_to 'Create a New Article', new_article_path, class: 'btn btn-success' %>
       </h1><!--. spinner -->
     <% end %>
+
+    <h2 class="page-header" align="left">Bubbles</h2>
+    <div class="bubbles">
+      <ul class="bubbles-list">
+        <li><a href= "http://www.couriernewjersey.com/tony-php/tony.php" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>
+        <li><a href= "http://www.couriernewjersey.com/asbury-game-html5/asbury.html" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>
+        <li><a href= "https://github.com/CMBmaseda" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>
+        <li><a href= "http://www.couriernewjersey.com/tony-php/tony.php" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>
+        <li><a href= "http://www.couriernewjersey.com/asbury-game-html5/asbury.html" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>
+        <li><a href= "https://github.com/CMBmaseda" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>
+      </ul><!--. bubbles-list -->
+    </div><!--. bubbles -->
+
 
   <% end %>
 

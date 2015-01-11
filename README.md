@@ -13,3 +13,5 @@ $ rake db:seed
 $ bundle exec rspec (tests unfinished)
 
 $ rails s
+
+log in with seeds, or create user account

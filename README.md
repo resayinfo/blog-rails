@@ -2,7 +2,7 @@ Blog-Ruby-On-Rails
 ==========
 
 
-A Rails 4.1 blog with devise, rolify, cancan, rspec, search, bootstrap css + js, iHover css,  jQuery, google fonts, and a gitignore.
+A Rails 4.1 blog with devise, rolify, cancan, rspec, summernote, bootstrap css/js, iHover + morphing-buttons css/js,  jQuery, google fonts, search and a gitignore.
 
 $ cd blog-rails
 

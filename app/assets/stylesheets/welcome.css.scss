@@ -44,6 +44,10 @@ h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, th a:hover, td a:hov
   cursor:pointer;
 }
 
+img {
+/* for articles' and comments' html output' */
+}
+
 
 /* Tables
 ----------------------------------------------------------------------------- */
@@ -116,7 +120,7 @@ input[type=checkbox] {
   min-height: 24px;
   margin-top: 18px;
   margin-bottom: 18px;
-  margin-left: 510px;
+  margin-left: 380px;
   width: 160px;
 }
 
@@ -400,6 +404,23 @@ label {
   margin-top: 60px;
   margin-bottom: 20px;
   margin-left: 48px;
+}
+
+
+/* summernote
+----------------------------------------------------------------------------- */
+
+.modal-content {
+  padding: 10px;
+  background: rgba(77, 87, 97, 1);
+}
+
+.note-editor .note-editable {
+  padding: 10px;
+  overflow: auto;
+  outline: 0;
+  background: rgba(253, 251, 253, 0.3);
+  text-align: left;
 }
 
 

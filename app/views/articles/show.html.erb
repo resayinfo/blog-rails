@@ -2,9 +2,9 @@
   <h1 class="page-header" align="center">"<%= @article.title %>"<br>By: <%= @article.author %></h1>
   <h2 class="articles-show-updated-sub-header">Created <%= @article.created_at.strftime('%b %-d, %Y, %l:%M %p, %Z') %><br>Updated <%= @article.updated_at.strftime('%b %-d, %Y, %l:%M %p, %Z') if @article.updated_at.present? %></h2>
 
-  <p class="articles-show-lefty">
-    <%= @article.text %>
-  </p>
+    <div class="articles-show-lefty">
+      <%= raw(@article.text) %>
+    </div>
 
   <table>
     <tr>

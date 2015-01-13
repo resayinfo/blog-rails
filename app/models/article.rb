@@ -5,5 +5,5 @@ class Article < ActiveRecord::Base
   validates :title, presence: true,
                     length: { minimum: 2, maximum: 25 }
   validates :text, presence: true,
-                    length: { minimum: 2, maximum: 5000 }
+                    length: { minimum: 2, maximum: 1000000 }
 end

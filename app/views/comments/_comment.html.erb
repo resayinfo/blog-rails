@@ -1,7 +1,9 @@
 <h3 class="commenter"><%= comment.commenter %></h3>
 <p class="commented"><%= comment.created_at.strftime('%b %-d, %Y, %l:%M %p, %Z') %></p>
 
-<p class="comments-lefty"><%= comment.body %></p>
+<div class="comments-lefty">
+  <%= raw(comment.body) %>
+</div>
 
 <% if current_user.has_role? :superadmin or current_user.has_role? :god %>
   <p class="comments-lefty">

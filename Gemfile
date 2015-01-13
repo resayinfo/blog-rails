@@ -46,6 +46,20 @@ gem 'cancan'
 
 gem "rolify"
 
+gem 'simple_form'
+
+# You'll need to include the following dependencies of Summernote
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+gem "font-awesome-rails"
+
+# This is the right gem to use summernote editor in Rails projects.
+gem 'summernote-rails'
+gem 'codemirror-rails'
+
+# To solve the problems on the turbolinks
+gem 'jquery-turbolinks'
+
 # Development only gems
 group :development do
   gem 'guard-cucumber'

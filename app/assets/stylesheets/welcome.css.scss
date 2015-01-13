@@ -433,3 +433,14 @@ label {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+
+/* morphing
+----------------------------------------------------------------------------- */
+// http://tympanus.net/codrops/2014/05/12/morphing-buttons-concept/
+
+.morph-button-overlay .morph-content {
+  overflow: hidden;
+  background-image: url(/assets/brick.png);
+  background-size: cover;
+}

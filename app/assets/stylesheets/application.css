@@ -14,12 +14,12 @@
 
 *= require main
 *= require devise
+*= require other
 *= require welcome
 *= require articles
 *= require comments
 *= require admins
 *= require superadmins
-
 
 
 

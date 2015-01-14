@@ -6,7 +6,8 @@
     <h2 class="page-header"><%= mail_to @superadmin.email, @superadmin.email %></h2>
 
     <% if can? :update, @superadmin %>
-    <p><%= link_to 'back', superadmins_path(@superadmins), class: 'btn btn-default' %> &nbsp; <%= link_to 'Edit', edit_superadmin_path(@superadmin), class: 'btn btn-default' %> &nbsp; <%= link_to 'Delete', superadmin_path(@superadmin) , class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <p><%= link_to 'back', superadmins_path(@superadmins), class: 'btn btn-default' %> &nbsp; <%= link_to 'Edit', edit_superadmin_path(@superadmin), class: 'btn btn-default' %> &nbsp; <%= link_to 'Delete', superadmin_path(@superadmin) , class: 'btn btn-danger',
+      method: :delete, data: { confirm: 'Are you sure?' } %></p>
     <% end %>
   </div><!--. admins -->
 
@@ -17,4 +18,3 @@
   <p align="center">Only the system admin can view and edit super admins.</p>
 
 <% end %>
-  

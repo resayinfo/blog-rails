@@ -410,6 +410,8 @@ label {
 
 /* summernote
 ----------------------------------------------------------------------------- */
+// https://github.com/summernote/summernote-rails
+// http://summernote.org/#/features#api
 
 .modal-content {
   padding: 10px;
@@ -520,11 +522,29 @@ label {
 }
 
 .morph-button-overlay .morph-content iframe {
-  width: 90%;
-  height: 600px;
+  width: 540;
+  height: 540px;
 }
 
 .morph-button-fixed, .morph-button-fixed .morph-content {
   width: 360px;
   height: 180px;
+}
+
+
+/* Media Queries
+----------------------------------------------------------------------------- */
+
+@media screen and (max-width: 1200px) {
+  .morph-button-overlay .morph-content iframe {
+    width: 90%;
+    height: 420px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .morph-button-overlay .morph-content iframe {
+    width: 90%;
+    height: 320px;
+  }
 }

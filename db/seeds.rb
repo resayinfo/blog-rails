@@ -8,7 +8,7 @@
 
 god = User.create(email: 'god@email.com', password: 'password', first_name: 'Jebidiah', last_name: 'Springfield')
 god.add_role 'god'
-# System Admin
+# Only the system admin can view and edit super admins.
 
 superadmin = User.create(email: 'superadmin@email.com', password: 'password', first_name: 'Abraham', last_name: 'Simpson')
 superadmin.add_role 'superadmin'

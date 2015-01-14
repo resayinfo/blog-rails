@@ -12,8 +12,22 @@ $ ->
   # to call summernote editor
   summer_note.summernote
     # to set options
-    height:500
-    lang: 'En'
+    height:540
+    lang: 'en-US'
+
+    toolbar: [
+      ['style', ['style']]
+      ['font', ['bold', 'italic', 'underline', 'clear']]
+      ['fontname', ['fontname']]
+      ['color', ['color']]
+      ['para', ['ul', 'ol', 'paragraph']]
+      ['height', ['height']]
+      ['table', ['table']]
+      ['insert', ['link', 'video', 'picture', 'hr']]
+      ['view', ['fullscreen', 'codeview']]
+      ['help', ['help']]
+    ]
+
     codemirror:
       lineNumbers: true
       tabSize: 2

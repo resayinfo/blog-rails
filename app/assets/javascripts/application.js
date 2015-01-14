@@ -17,7 +17,6 @@
 
 //= require bootstrap-sprockets
 
-//= require bootstrap
 //= require codemirror
 //= require codemirror/modes/ruby
 //= require codemirror/modes/sass

@@ -175,28 +175,144 @@
 
     })( window );
   </script>
-  <div class="morph-button morph-button-sidebar morph-button-fixed">
-    <button type="button"><span class="icon icon-cog">Settings Menu</span></button>
-    <div class="morph-content">
-      <div>
-        <div class="content-style-sidebar">
-          <span class="icon icon-close">Close the overlay</span>
-          <h2>Settings</h2>
-          <ul>
-            <li><a class="icon icon-camera" href="#">Default filters</a></li>
-            <li><a class="icon icon-server" href="#">Storage Use</a></li>
-            <li><a class="icon icon-heart" href="#">Favorites</a></li>
-            <li><a class="icon icon-zoom-in" href="#">Readability</a></li>
-            <li><a class="icon icon-microphone" href="#">Speech</a></li>
-            <li><a class="icon icon-cloud" href="#">Uploads</a></li>
-            <li><a class="icon icon-user" href="#">Profile</a></li>
-            <li><a class="icon icon-briefcase" href="#">Documents</a></li>
-            <li><a class="icon icon-globe" href="#">Global Options</a></li>
-          </ul>
+  <section>
+    <div class="morph-button morph-button-overlay morph-button-fixed">
+      <button type="button">More Info</button>
+      <div class="morph-content">
+        <div>
+          <div class="content-style-overlay">
+            <span class="icon icon-close">Close the overlay</span>
+            <h1><%= image_tag 'simpsons.png', class:"articles-index-nothing-yet-pic-1" %> <%= image_tag 'simpsons.png', class:"articles-index-nothing-yet-pic-2" %></h1>
+
+            <% if can? :create, Article %>
+            <h1 class="spinner">
+              <%= link_to 'Create a New Article', new_article_path, class: 'btn btn-success' %>
+            </h1><!--. spinner -->
+            <% end %>
+
+            <h2 class="page-header" align="left">Bubbles</h2>
+            <div class="bubbles">
+              <ul class="bubbles-list">
+                <li><a href= "http://www.couriernewjersey.com/tony-php/tony.php" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>
+                <li><a href= "http://www.couriernewjersey.com/asbury-game-html5/asbury.html" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>
+                <li><a href= "https://github.com/CMBmaseda" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>
+                <li><a href= "http://www.couriernewjersey.com/tony-php/tony.php" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>
+              </ul><!--. bubbles-list -->
+            </div><!--. bubbles -->
+
+            <h2 class="page-header" align="left">iHover</h2>
+
+            <!-- Left to right-->
+            <div class="row" align="center">
+              <div class="col-sm-6">
+                <!-- normal -->
+                <div class="ih-item square effect11 left_to_right"><a href="#">
+                  <%= image_tag 'simpsons.png', class:"img" %>
+                  <div class="info">
+                    <h3>Heading here</h3>
+                    <p>Description goes here</p>
+                  </div></a>
+                </div>
+                <!-- end normal -->
+              </div>
+              <div class="col-sm-6">
+                <!-- colored -->
+                <div class="ih-item square colored effect11 left_to_right"><a href="#">
+                  <%= image_tag 'simpsons.png', class:"img" %>
+                  <div class="info">
+                    <h3>Heading here</h3>
+                    <p>Description goes here</p>
+                  </div></a>
+                </div>
+                <!-- end colored -->
+              </div>
+            </div><!-- End Row -->
+            <!-- end Left to right-->
+            <!-- Right to left-->
+            <div class="row" align="center">
+              <div class="col-sm-6">
+                <!-- normal -->
+                <div class="ih-item square effect11 right_to_left"><a href="#">
+                  <%= image_tag 'simpsons.png', class:"img" %>
+                  <div class="info">
+                    <h3>Heading here</h3>
+                    <p>Description goes here</p>
+                  </div></a>
+                </div>
+                <!-- end normal -->
+              </div>
+              <div class="col-sm-6">
+                <!-- colored -->
+                <div class="ih-item square colored effect11 right_to_left"><a href="#">
+                  <%= image_tag 'simpsons.png', class:"img" %>
+                  <div class="info">
+                    <h3>Heading here</h3>
+                    <p>Description goes here</p>
+                  </div></a>
+                </div>
+                <!-- end colored -->
+              </div>
+            </div><!-- End Row -->
+            <!-- end Right to left-->
+            <!-- Left to right-->
+            <div class="row" align="center">
+              <div class="col-sm-6">
+                <!-- normal -->
+                <div class="ih-item square effect11 top_to_bottom"><a href="#">
+                  <%= image_tag 'simpsons.png', class:"img" %>
+                  <div class="info">
+                    <h3>Heading here</h3>
+                    <p>Description goes here</p>
+                  </div></a>
+                </div>
+                <!-- end normal -->
+              </div>
+              <div class="col-sm-6">
+                <!-- colored -->
+                <div class="ih-item square colored effect11 top_to_bottom"><a href="#">
+                  <%= image_tag 'simpsons.png', class:"img" %>
+                  <div class="info">
+                    <h3>Heading here</h3>
+                    <p>Description goes here</p>
+                  </div></a>
+                </div>
+                <!-- end colored -->
+              </div>
+            </div><!-- End Row -->
+            <!-- end Left to right-->
+            <!-- Right to left-->
+            <div class="row" align="center">
+              <div class="col-sm-6">
+                <!-- normal -->
+                <div class="ih-item square effect11 bottom_to_top"><a href="#">
+                  <%= image_tag 'simpsons.png', class:"img" %>
+                  <div class="info">
+                    <h3>Heading here</h3>
+                    <p>Description goes here</p>
+                  </div></a>
+                </div>
+                <!-- end normal -->
+              </div>
+              <div class="col-sm-6">
+                <!-- colored -->
+                <div class="ih-item square colored effect11 bottom_to_top"><a href="#">
+                  <%= image_tag 'simpsons.png', class:"img" %>
+                  <div class="info">
+                    <h3>Heading here</h3>
+                    <p>Description goes here</p>
+                  </div></a>
+                </div>
+                <!-- end colored -->
+              </div>
+            </div><!-- End Row -->
+            <!-- end Right to left-->
+            <h2 class="page-header" align="left">YouTube</h2>
+            <iframe title="YouTube video player" src="https://www.youtube.com/embed/N_Wl3OMwcig?rel=0" frameborder="0" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
-    </div>
-  </div><!-- morph-button -->
+    </div><!-- morph-button -->
+  </section>
   <script>
     (function() {
       var docElem = window.document.documentElement, didScroll, scrollPosition;

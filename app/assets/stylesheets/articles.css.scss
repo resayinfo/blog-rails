@@ -48,19 +48,19 @@
 }
 
 .side-pic {
-  width: 270px;
-  height: 140px;
+  width: 240px;
+  height: 180px;
   opacity: 1.0;
   background: none;
-  -webkit-filter: hue-rotate(90deg);
-  -moz-filter: hue-rotate(90deg);
-  filter: hue-rotate(90deg);
+  -webkit-filter: hue-rotate(165deg);
+  -moz-filter: hue-rotate(165deg);
+  filter: hue-rotate(165deg);
 }
 
 .side-pic:hover {
-  -webkit-filter: hue-rotate(300deg);
-  -moz-filter: hue-rotate(300deg);
-  filter: hue-rotate(300deg);
+  -webkit-filter: hue-rotate(195deg);
+  -moz-filter: hue-rotate(195deg);
+  filter: hue-rotate(195deg);
   -webkit-animation: cssAnimation 4.3348s 1 ease;
   -moz-animation: cssAnimation 4.3348s 1 ease;
   -o-animation: cssAnimation 4.3348s 1 ease;

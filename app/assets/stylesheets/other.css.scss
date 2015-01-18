@@ -353,8 +353,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 
 .morph-button-sidebar {
   position: fixed;
-  bottom: 50px;
-  left: 50px;
+  bottom:10px;
 }
 
 .morph-button-sidebar > button {
@@ -1022,8 +1021,8 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 }
 
 .content-style-sidebar .icon-close {
-  top: 0;
-  right: 0;
+  top: 48px;
+  right: 24px;
   font-size: 0.85em;
 }
 

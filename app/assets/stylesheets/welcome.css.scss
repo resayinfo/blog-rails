@@ -48,8 +48,9 @@ p { font-size: 18px; margin-bottom: 12px; }
 
 iframe {
   margin: 0 auto;
-  width: 1080px;
-  height: 540px;
+  width: 640px;
+  height: 480px;
+  margin-bottom: 6px;
 }
 
 
@@ -388,7 +389,7 @@ label {
   margin-top: 30px;
   opacity: 1.0;
   float: left;
-  margin-right: 30px;
+  margin-right: 140px;
   -webkit-filter: grayscale(90%);
   -moz-filter: grayscale(90%);
   filter: grayscale(90%);
@@ -403,7 +404,7 @@ label {
 }
 
 .welcome-vid-1 {
-  width: 1000px;
+  width: 1080px;
   height: 600px;
   margin-top: 60px;
   margin-bottom: 20px;

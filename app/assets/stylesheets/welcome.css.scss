@@ -553,14 +553,55 @@ label {
 /* Media Queries
 ----------------------------------------------------------------------------- */
 
-// @media screen and (max-width: 1200px) {
-// }
-//
-// @media screen and (max-width: 960px) {
-// }
-//
-// @media screen and (max-width: 640px) {
-// }
+@media screen and (max-width: 600px) {
+
+  textarea {
+    width: 80%;
+    height: 480px;
+    font-size: 24px;
+  }
+
+  input, input[type="password"], input[type="search"] {
+    width: 80%;
+    height: 80px;
+    font-size: 24px;
+  }
+
+  input[type=submit] {
+    width: 40%;
+  }
+
+  input[type=checkbox] {
+    height: 24px;
+    width: 24px;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+
+  textarea {
+    width: 90%;
+    height: 480px;
+    font-size: 24px;
+  }
+
+  input, input[type="password"], input[type="search"] {
+    width: 90%;
+    height: 120px;
+    font-size: 24px;
+  }
+
+  input[type=submit] {
+    width: 60%;
+  }
+
+  input[type=checkbox] {
+    height: 24px;
+    width: 24px;
+  }
+
+}
 //
 // @media screen and (max-width: 480px) {
 // }

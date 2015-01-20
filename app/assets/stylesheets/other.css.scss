@@ -186,19 +186,21 @@
 
 .morph-button-modal-2 > button,
 .morph-button-modal-2 .morph-content {
-  background-image: url(/assets/login.png);
+  background-image: url(/assets/matrix.gif);
   background-size: cover;
   color: #FFFFFF;
-  font-size: 42px;
+  font-size: 45px;
+  font-weight: 600;
   border-radius: 10px;
 }
 
 .morph-button-modal-3 > button,
 .morph-button-modal-3 .morph-content {
-  background-image: url(/assets/signup.png);
+  background-image: url(/assets/matrix.gif);
   background-size: cover;
   color: #FFFFFF;
   font-size: 42px;
+  font-weight: 600;
   border-radius: 10px;
 }
 

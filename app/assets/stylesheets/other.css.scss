@@ -188,9 +188,10 @@
 .morph-button-modal-2 .morph-content,
 .morph-button-modal-3 > button,
 .morph-button-modal-3 .morph-content {
-  background-color: rgba(255,253,255,0.5);
+  background-image: url(/assets/brick.png);
+  background-size: cover;
   color: #FFFFFF;
-  font-size: 48px;
+  font-size: 42px;
   border-radius: 10px;
 }
 

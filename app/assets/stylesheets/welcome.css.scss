@@ -549,12 +549,16 @@ label {
 /* Media Queries
 ----------------------------------------------------------------------------- */
 
-//
-// @media screen and (max-width: 640px) {
-// }
+@media screen and (max-width: 640px) {
+  .radio, .checkbox {
+    margin-left: 160px;
+    width: 160px;
+  }
+}
 //
 // @media screen and (max-width: 480px) {
 // }
+//
 //
 // @media screen and (max-width: 320px) {
 // }

@@ -46,13 +46,6 @@ h6 { font-size: 12px; margin-bottom: 12px; }
 
 p { font-size: 18px; margin-bottom: 12px; }
 
-iframe {
-  margin: 0 auto;
-  width: 640px;
-  height: 480px;
-  margin-bottom: 6px;
-}
-
 
 /* Tables
 ----------------------------------------------------------------------------- */
@@ -93,7 +86,7 @@ textarea {
   font-weight: 500;
   border:none;
   outline:none;
-  background-color: rgba(253,251,253,0.3);
+  background-color: #504f50;
   color: #FFFFFF;
 }
 
@@ -103,7 +96,7 @@ input, input[type="password"], input[type="search"] {
   outline:none;
   width: 580px;
   padding: 16px;
-  background-color: rgba(253,251,253,0.3);
+  background-color: #504f50;
   color: #FFFFFF;
   font-size: 18px;
   font-weight: 600;
@@ -440,7 +433,7 @@ label {
 }
 
 .note-editor {
-  width: 1000px;
+  width: 1060px;
   margin: 0 auto;
 }
 

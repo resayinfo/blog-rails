@@ -38,6 +38,13 @@
   text-align: left;
 }
 
+.comments-lefty iframe {
+  margin: 0 auto;
+  width: 840px;
+  height: 480px;
+  margin-bottom: 6px;
+}
+
 .comments-lefty h2 a:hover, .comments-lefty h3 a:hover, .comments-lefty h4 a:hover, .comments-lefty h5 a:hover, .comments-lefty h6 a:hover, .comments-lefty th a:hover, .comments-lefty td a:hover, .comments-lefty p a:hover, .comments-lefty li a:hover {
   background: rgba(0, 255, 0, 0.4);
   color: #FFFFFF;

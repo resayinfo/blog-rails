@@ -12,7 +12,7 @@ $ ->
   # to call summernote editor
   summer_note.summernote
     # to set options
-    height:540
+    height:600
     lang: 'en-US'
 
     toolbar: [

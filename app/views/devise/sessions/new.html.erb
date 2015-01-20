@@ -1,6 +1,6 @@
 <div class="devise-center">
 
-  <h1 class="page-header" align="center" style="margin-bottom: 60px;">Rails Blog</h1>
+  <h1 class="page-header" align="center" style="margin-bottom: 60px; font-size: 72px;">Rails Blog</h1>
 
   <section>
     <div class="morph-button morph-button-modal morph-button-modal-2 morph-button-fixed" style="margin-bottom: 60px;">
@@ -12,18 +12,20 @@
             <h2>Log In</h2>
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                 <div>
-                  <%= f.label :email %><br />
+                  <%= f.label :email %>
                   <%= f.email_field :email, autofocus: true %>
                 </div>
-                <div><%= f.label :password %><br />
+                <div>
+                  <%= f.label :password %>
                   <%= f.password_field :password, autocomplete: "on" %></div>
                     <% if devise_mapping.rememberable? -%>
                       <%= f.label :remember_me, class: 'checkbox' do %>
                       <%= f.check_box :remember_me %> Remember me
                     <% end %>
                   <% end -%>
-                <div><%= f.submit "Log In", class: 'btn btn-default' %></div>
-                <br><%= link_to "Forgot your password?", new_password_path(resource_name), class: 'btn btn-primary' %>
+                <div align="center"><%= f.submit "Log In", class: 'btn btn-default' %></div>
+                <div align="center"><%= link_to "Forgot your password?", new_password_path(resource_name), class: 'btn btn-primary' %></div>
+                <br>
               <% end %>
           </div>
         </div>
@@ -33,23 +35,24 @@
     <div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
       <button type="button">Sign Up</button>
         <div class="morph-content">
-          <div>
+        <div>
           <div class="content-style-form content-style-form-2">
             <span class="icon icon-close">Close the dialog</span>
             <h2>Sign Up</h2>
               <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
               <%= devise_error_messages! %>
-                <div><%= f.label :first_name %><br />
+                <div><%= f.label :first_name %>
                 <%= f.text_field :first_name, autofocus: true %></div>
-                <div><%= f.label :last_name %><br />
+                <div><%= f.label :last_name %>
                 <%= f.text_field :last_name, autofocus: true %></div>
-                <div><%= f.label :email %><br />
+                <div><%= f.label :email %>
                 <%= f.email_field :email, autofocus: true %></div>
-                <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
+                <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %>
                 <%= f.password_field :password, autocomplete: "off" %></div>
-                <div><%= f.label :password_confirmation %><br />
+                <div><%= f.label :password_confirmation %>
                 <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-                <br><div><%= f.submit "Sign Up", class: 'btn btn-default' %></div><br>
+                <div align="center"><%= f.submit "Sign Up", class: 'btn btn-default' %></div>
+                <br>
               <% end %>
           </div>
         </div>

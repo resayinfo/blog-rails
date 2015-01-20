@@ -101,7 +101,7 @@ input, input[type="password"], input[type="search"] {
   -webkit-appearance: textfield;
   border:none;
   outline:none;
-  width: 500px;
+  width: 560px;
   padding: 16px;
   background-color: rgba(253,251,253,0.3);
   color: #FFFFFF;
@@ -132,6 +132,8 @@ input[type=checkbox] {
 label {
   font-family: "Patrick Hand SC";
   font-size: 18px;
+  margin-bottom: 0px;
+  margin-top: 12px;
 }
 
 

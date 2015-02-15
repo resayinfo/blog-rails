@@ -44,8 +44,11 @@ class AdminsController < ApplicationController
     @admin = User.find(params[:id])
 
     if params[:user][:password].empty?
+      logger.debug 'should delete password here'
       params[:user].delete :password
     end
+
+    logger.debug "params = #{params}"
 
     respond_to do |format|
       if @admin.update_attributes(admin_params)

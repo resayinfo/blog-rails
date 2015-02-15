@@ -5,9 +5,12 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   validates :email, presence: true
-  validates :password, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
+  # validates :password, presence: true
+  validates :password, presence: true, length: {minimum: 8, maximum: 128}, on: :create
+  validates :password, length: {minimum: 8, maximum: 128}, on: :update, allow_blank: true
+
   def name
     "#{self.first_name} #{self.last_name}"
   end

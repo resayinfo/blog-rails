@@ -44,8 +44,11 @@ class SuperadminsController < ApplicationController
     @superadmin = User.find(params[:id])
 
     if params[:user][:password].empty?
+      logger.debug 'should delete password here'
       params[:user].delete :password
     end
+
+    logger.debug "params = #{params}"
 
     respond_to do |format|
       if @superadmin.update_attributes(superadmin_params)

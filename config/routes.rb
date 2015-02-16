@@ -2,6 +2,16 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  namespace :api do
+    resources :articles, only: [:index, :create, :destroy, :update, :show] do
+        resources :comments, only: [:create]
+        put :reorder, on: :collection
+    end
+    resources :comments, only: [:update, :destroy] do
+      put :reorder, on: :collection
+    end
+  end
+
   resources :articles do
     resources :comments
     get 'search', on: :collection

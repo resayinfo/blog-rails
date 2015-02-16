@@ -29,7 +29,5 @@ Rails.application.routes.draw do
     get 'search', on: :collection
   end
 
-  resources :colors
-
   root 'welcome#index'
 end

@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'colors/index'
+
+  get 'rgba/index'
+
   devise_for :users
 
   namespace :api do
@@ -24,6 +28,8 @@ Rails.application.routes.draw do
   resources :superadmins do
     get 'search', on: :collection
   end
+
+  resources :colors
 
   root 'welcome#index'
 end

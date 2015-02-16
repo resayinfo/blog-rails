@@ -1,29 +1,5 @@
-<div class="articles">
-  <h1 class="page-header" align="center">"<%= @article.title %>"<br>By: <%= @article.author %></h1>
-  <h2 class="articles-show-updated-sub-header">Created <%= @article.created_at.strftime('%b %-d, %Y, %l:%M %p, %Z') %><br>Updated <%= @article.updated_at.strftime('%b %-d, %Y, %l:%M %p, %Z') if @article.updated_at.present? %></h2>
-
-    <div class="articles-show-lefty">
-      <%= raw(@article.text) %>
-    </div>
-
-  <table>
-    <tr>
-      <% if current_user.has_role? :superadmin or current_user.has_role? :god %>
-        <td><%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-default' %></td>
-        <td><%= link_to 'Delete', article_path(@article) , class: 'btn btn-danger',
-                                method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <% end %>
-    </tr>
-  </table>
-
-  <h2 class="comments">Comments</h2>
-  <%= render @article.comments %>
-  <% if can? :manage, Comment %>
-    <h3 class="comment">Add a comment:</h3>
-    <%= render "comments/form" %>
-  <% end %>
-
-</div><!--. articles -->
+<h1>Colors#index</h1>
+<p>Find me in app/views/colors/index.html.erb</p>
 
 <div class="morph-button morph-button-sidebar morph-button-fixed">
   <button type="button"><span class="icon icon-cog">Settings Menu</span></button>

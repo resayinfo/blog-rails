@@ -21,7 +21,14 @@
     <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
       <%= f.password_field :current_password, autocomplete: "off" %></div>
 
-    <br><div><%= f.submit "Edit", class: 'btn btn-default' %></div><br>
+    <h3 class="articles-form-headers">
+        <%= f.label :biography %><br>
+    </h3>
+    <p>
+      <%= f.text_area :biography, class: "summernote", placeholder: 'minimum: 2, maximum: 1,000,000' %>
+    </p>
+
+    <br><div><%= f.submit "Submit", class: 'btn btn-default' %></div><br>
   <% end %>
 
   <h3>Cancel my account</h3>

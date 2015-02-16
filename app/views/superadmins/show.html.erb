@@ -5,6 +5,10 @@
 
     <h2 class="page-header"><%= mail_to @superadmin.email, @superadmin.email %></h2>
 
+    <div class="articles-show-lefty">
+      <%= raw(@superadmin.biography) %>
+    </div>
+
     <% if can? :update, @superadmin %>
     <p><%= link_to 'back', superadmins_path(@superadmins), class: 'btn btn-default' %> &nbsp; <%= link_to 'Edit', edit_superadmin_path(@superadmin), class: 'btn btn-default' %> &nbsp; <%= link_to 'Delete', superadmin_path(@superadmin) , class: 'btn btn-danger',
       method: :delete, data: { confirm: 'Are you sure?' } %></p>

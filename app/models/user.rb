@@ -11,6 +11,9 @@ class User < ActiveRecord::Base
   validates :password, presence: true, length: {minimum: 8, maximum: 128}, on: :create
   validates :password, length: {minimum: 8, maximum: 128}, on: :update, allow_blank: true
 
+  # validates :biography, presence: true,
+  #                   length: { minimum: 2, maximum: 500000 }
+
   def name
     "#{self.first_name} #{self.last_name}"
   end

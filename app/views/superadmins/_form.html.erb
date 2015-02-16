@@ -38,6 +38,13 @@
   <%= f.password_field :password %>
 </p>
 
+<h3 class="articles-form-headers">
+    <%= f.label :biography %><br>
+</h3>
+<p>
+  <%= f.text_area :biography, class: "summernote", placeholder: 'minimum: 2, maximum: 1,000,000' %>
+</p>
+
 <h3>
   <%= f.submit class: 'btn btn-default' %>
 </h3>

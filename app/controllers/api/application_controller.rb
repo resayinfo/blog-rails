@@ -9,7 +9,7 @@ class Api::ApplicationController < ApplicationController
   wrap_parameters false
 
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
-  # rescue_from CanCan::AccessDenied, with: :access_denied
+  rescue_from CanCan::AccessDenied, with: :access_denied
 
   protected
 

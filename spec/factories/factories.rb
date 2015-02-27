@@ -1,25 +1,42 @@
 FactoryGirl.define do
 
   factory :user do
-    first_name 'Maggie'
-    last_name 'Simpson'
-    email 'maggi@email.com'
+    first_name 'Clancy'
+    last_name 'Wighum'
+    email 'cw@email.com'
     password 'password'
   end
 
-  factory :admin, class: User do
-    first_name 'Lisa'
-    last_name 'Simpson'
-    email 'lisa@email.com'
+
+  factory :admin_user, class: User do
+    first_name 'Waylan'
+    last_name 'Smithers'
+    email 'mb@email.com'
     password 'password'
   end
 
-  factory :superadmin, class: User do
-    first_name 'Marge'
-    last_name 'Simpson'
-    email 'marge@email.com'
+
+  factory :superadmin_user, class: User do
+    first_name 'Montgomery'
+    last_name 'Burns'
+    email 'mb@email.com'
     password 'password'
   end
+
+  factory :invalid_admin_user, class: User do
+  end
+
+
+  factory :god_user, class: User do
+    first_name 'Jebidiah'
+    last_name 'Springfield'
+    email 'jb@email.com'
+    password 'password'
+  end
+
+  factory :invalid_god_user, class: User do
+  end
+
 
   factory :article do
     author "Krusty the Klown"
@@ -27,21 +44,17 @@ FactoryGirl.define do
     text "Elementary"
   end
 
+  factory :invalid_article, class: Article do
+  end
+
+
   factory :comment do
     commenter "Moe"
     body "Shelbyville"
   end
 
-  factory :invalid_article, class: Article do
-  end
-
   factory :invalid_comment, class: Comment do
   end
 
-  factory :invalid_admin, class: User do
-  end
-
-  factory :invalid_superadmin, class: User do
-  end
 
 end

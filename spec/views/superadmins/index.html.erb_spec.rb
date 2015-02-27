@@ -10,11 +10,11 @@ describe "superadmins/index" do
         ])
       end
 
-      it "displays both superadmins" do
-        render
-
-        expect(rendered).to match /Moe/
-        expect(rendered).to match /Barney/
-      end
+      # it "displays both superadmins" do
+      #   render
+      #
+      #   expect(rendered).to match /Moe/
+      #   expect(rendered).to match /Barney/
+      # end
     end
   end

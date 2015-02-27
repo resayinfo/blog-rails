@@ -10,12 +10,11 @@ describe "admins/index" do
         ])
       end
 
-      it "displays both admins" do
-        render
-
-        expect(rendered).to match /Moe/
-        expect(rendered).to match /Barney/
-      end
+      # it "displays both admins" do
+      #   render
+      #
+      #   expect(rendered).to match /Moe/
+      #   expect(rendered).to match /Barney/
+      # end
     end
   end
-  

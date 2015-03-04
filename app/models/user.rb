@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   # validates :biography, presence: true,
   #                   length: { minimum: 2, maximum: 500000 }
 
-  has_many :articles, dependent: :destroy
+  # has_many :articles, dependent: :destroy
 
   before_save :ensure_authentication_token
 

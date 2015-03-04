@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   validates :password, length: {minimum: 8, maximum: 128}, on: :update, allow_blank: true
 
   # validates :biography, presence: true,
-  #                   length: { minimum: 2, maximum: 500000 }
+  #                   length: { minimum: 2, maximum: 100000000 }
 
   # has_many :articles, dependent: :destroy
 

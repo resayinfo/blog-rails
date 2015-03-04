@@ -43,7 +43,7 @@ gem 'spring',        group: :development
 gem 'devise'
 
 # Authorization
-gem 'cancan'
+gem 'cancancan'
 
 gem "rolify"
 

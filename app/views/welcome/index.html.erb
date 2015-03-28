@@ -72,6 +72,9 @@
   </table>
 
   <h2 class="page-header">Users</h2>
+  <div class="admins">
+    <%= render partial: 'users/search', locals: { q: '' } %>
+  </div>
   <table>
     <tr>
       <th class="admins-index-table-headlines">Name</th>
@@ -122,6 +125,9 @@
   </table>
 
   <h2 class="page-header">Users</h2>
+  <div class="admins">
+    <%= render partial: 'users/search', locals: { q: '' } %>
+  </div>
   <table>
     <tr>
       <th class="admins-index-table-headlines">Name</th>

@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
   #                   length: { minimum: 2, maximum: 100000000 }
 
   has_many :articles, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   before_save :ensure_authentication_token
 

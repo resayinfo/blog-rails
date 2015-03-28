@@ -52,7 +52,7 @@ class Api::CommentsController < Api::ApplicationController
   end
 
   def comment_params
-    params.permit(:body, :commenter)
+    params.permit(:body)
   end
 
 

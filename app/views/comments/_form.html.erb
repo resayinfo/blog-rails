@@ -1,11 +1,6 @@
 <%= form_for([@article, @article.comments.build]) do |f| %>
 
   <p>
-    <%= f.label :commenter %><br>
-    <%= f.text_field :commenter, value: current_user.name %>
-  </p>
-  <p>
-    <%= f.label :body %><br>
     <%= f.text_area :body, class: "summernote", placeholder: '500,000 characters max' %>
   </p>
   <p>

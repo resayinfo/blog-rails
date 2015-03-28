@@ -16,4 +16,6 @@ superadmin.add_role 'superadmin'
 admin = User.create(email: 'admin@email.com', password: 'password', first_name: 'Homer', last_name: 'Simpson')
 admin.add_role 'admin'
 
-user = User.create(email: 'user@email.com', password: 'password', first_name: 'Bart', last_name: 'Simpson')
+user = User.create(email: 'bs@email.com', password: 'password', first_name: 'Bart', last_name: 'Simpson')
+
+user = User.create(email: 'ls@email.com', password: 'password', first_name: 'Lisa', last_name: 'Simpson')

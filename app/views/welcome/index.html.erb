@@ -76,18 +76,19 @@
     <tr>
       <th class="admins-index-table-headlines">Name</th>
       <th class="admins-index-table-headlines">Email</th>
-      <th class="admins-index-table-headlines">Terminate</th>
+      <th colspan="2"></th>
     </tr>
     <% @users.each do |user| %>
-      <tr>
-        <% if user.has_role? :admin or user.has_role? :superadmin or user.has_role? :god %>
-        <% else %>
-          <td><%= user.name %></td>
-          <td><%= mail_to user.email, user.email %></td>
-          <td><%= link_to 'Delete', admin_path(user) , class: 'btn btn-danger',
-          method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
+    <tr>
+      <% if user.has_role? :admin or user.has_role? :superadmin or user.has_role? :god %>
+      <% else %>
+        <td><%= link_to user.name, user_path(user) %></td>
+        <td><%= mail_to user.email, user.email %></td>
+        <td><%= link_to 'Edit', edit_user_registration_path, class: 'btn btn-default' %></td>
+        <td><%= link_to 'Delete', user_path(user) , class: 'btn btn-danger',
+                method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tr>
     <% end %>
   </table>
 
@@ -97,21 +98,45 @@
 
   <h1 class="page-header" align="center">Rails Blog</h1>
 
+  <h2 class="page-header">Admins</h2>
+  <div class="admins">
+    <%= render partial: 'admins/search', locals: { q: '' } %>
+  </div>
+  <table>
+    <tr>
+      <th class="admins-index-table-headlines">Name</th>
+      <th class="admins-index-table-headlines">Email</th>
+      <th colspan="2">
+        <%= link_to 'New Administrator', new_admin_path, class: 'btn btn-success' %>
+      </th>
+    </tr>
+    <% @admins.each do |admin| %>
+      <tr>
+        <td><%= link_to admin.name, admin_path(admin) %></td>
+        <td><%= mail_to admin.email, admin.email %></td>
+        <td><%= link_to 'Edit', edit_admin_path(admin), class: 'btn btn-default' %></td>
+        <td><%= link_to 'Delete', admin_path(admin) , class: 'btn btn-danger',
+        method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+
   <h2 class="page-header">Users</h2>
   <table>
     <tr>
       <th class="admins-index-table-headlines">Name</th>
       <th class="admins-index-table-headlines">Email</th>
-      <th class="admins-index-table-headlines">Terminate</th>
+      <th colspan="2"></th>
     </tr>
     <% @users.each do |user| %>
     <tr>
       <% if user.has_role? :admin or user.has_role? :superadmin or user.has_role? :god %>
       <% else %>
-      <td><%= user.name %></td>
-      <td><%= mail_to user.email, user.email %></td>
-      <td><%= link_to 'Delete', admin_path(user) , class: 'btn btn-danger',
-      method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to user.name, user_path(user) %></td>
+        <td><%= mail_to user.email, user.email %></td>
+        <td><%= link_to 'Edit', edit_user_registration_path, class: 'btn btn-default' %></td>
+        <td><%= link_to 'Delete', user_path(user) , class: 'btn btn-danger',
+                method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
     </tr>
     <% end %>

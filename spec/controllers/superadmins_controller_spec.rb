@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe AdminsController, :type => :controller do
+RSpec.describe SuperadminsController, :type => :controller do
   login_god
 
   it "renders the :index view" do
@@ -16,7 +16,7 @@ RSpec.describe AdminsController, :type => :controller do
 
   describe "GET #show" do
     it "renders the #show view" do
-      user = FactoryGirl.create(:admin_user)
+      user = FactoryGirl.create(:superadmin_user)
       get :show, id: user
       expect(response).to render_template :show
     end
@@ -31,14 +31,14 @@ RSpec.describe AdminsController, :type => :controller do
 
   describe "POST #create" do
     context "with valid attributes" do
-      it "creates a new admin" do
+      it "creates a new superadmin" do
         expect{
           post :create, user: FactoryGirl.attributes_for(:superadmin_user)
         }.to change(User,:count).by(1)
       end
-      it "saves the new admin in the database" do
+      it "saves the new superadmin in the database" do
         expect{
-          post :create, user: FactoryGirl.attributes_for(:admin_user)
+          post :create, user: FactoryGirl.attributes_for(:superadmin_user)
         }.to change(User,:count)
       end
     end
@@ -52,48 +52,48 @@ RSpec.describe AdminsController, :type => :controller do
 
   describe 'PATCH #update' do
     before :each do
-      @user = FactoryGirl.create(:admin_user)
+      @user = FactoryGirl.create(:superadmin_user)
     end
     context "with valid attributes" do
-      it "locates the requested admin" do
-        patch :update, id: @user, user: FactoryGirl.attributes_for(:admin_user)
-        expect(assigns(:admin_user)).to eq(@admin)
+      it "locates the requested superadmin" do
+        patch :update, id: @user, user: FactoryGirl.attributes_for(:superadmin_user)
+        expect(assigns(:superadmin_user)).to eq(@superadmin)
       end
-      it "changes @admin's attributes" do
-        patch :update, id: @user, user: FactoryGirl.attributes_for(:admin_user, first_name: 'Maud')
+      it "changes @superadmin's attributes" do
+        patch :update, id: @user, user: FactoryGirl.attributes_for(:superadmin_user, first_name: 'Maud')
         @user.reload
         expect(@user.first_name).to eq('Maud')
       end
-      it "redirects to the updated admin" do
-        patch :update, id: @user, user: FactoryGirl.attributes_for(:admin_user)
-        expect(response).to redirect_to @admin
+      it "redirects to the updated superadmin" do
+        patch :update, id: @user, user: FactoryGirl.attributes_for(:superadmin_user)
+        expect(response).to redirect_to @superadmin
       end
     end
     context "with invalid attributes" do
-      it "does not change the admin's attributes" do
-        patch :update, id: @user, user: FactoryGirl.attributes_for(:admin_user)
+      it "does not change the superadmin's attributes" do
+        patch :update, id: @user, user: FactoryGirl.attributes_for(:superadmin_user)
         @user.reload
         expect(@user.name).to_not eq("Heather")
       end
-      it "redirects to the updated admin" do
-        patch :update, id: @user, user: FactoryGirl.attributes_for(:admin_user)
-        expect(response).to redirect_to @admin
+      it "redirects to the updated superadmin" do
+        patch :update, id: @user, user: FactoryGirl.attributes_for(:superadmin_user)
+        expect(response).to redirect_to @superadmin
       end
     end
   end
 
   describe 'DELETE #destroy' do
     before :each do
-      @user = FactoryGirl.create(:admin_user)
+      @user = FactoryGirl.create(:superadmin_user)
     end
-    it "deletes the admin" do
+    it "deletes the superadmins" do
       expect {
         delete :destroy, id: @user
       }.to change(User,:count).by(-1)
     end
-    it "redirects to admins#index" do
+    it "redirects to superadmins#index" do
       delete :destroy, id: @user
-      expect(response).to redirect_to admins_path
+      expect(response).to redirect_to superadmins_path
     end
   end
 

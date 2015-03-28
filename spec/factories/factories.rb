@@ -32,6 +32,7 @@ FactoryGirl.define do
     last_name 'Springfield'
     email 'jb@email.com'
     password 'password'
+    after(:create) {|user| user.add_role(:god)}
   end
 
   factory :invalid_god_user, class: User do

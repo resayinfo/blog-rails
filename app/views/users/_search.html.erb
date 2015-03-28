@@ -1,0 +1,6 @@
+<form action="<%= search_users_path %>" method="get">
+  <%= text_field_tag 'q', q, placeholder: 'Search By User Name' %>
+  <div class="in-search">
+    <%= submit_tag 'Find User', name: nil, class: 'btn btn-default' %>
+  </div>
+</form>

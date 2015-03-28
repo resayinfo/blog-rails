@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'users/index'
+
   devise_for :users
+  resources :users do
+    get 'search', on: :collection
+  end
 
   namespace :api do
 
@@ -10,7 +15,7 @@ Rails.application.routes.draw do
       post 'users/sign_in', to: 'sessions#create'
       post 'users/password', to: 'passwords#create'
 
-    resources :users, only: [:show]
+    resources :users
 
     resources :articles, only: [:index, :create, :destroy, :update, :show] do
         resources :comments, only: [:create]

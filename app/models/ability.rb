@@ -39,11 +39,13 @@ class Ability
 
     elsif user.has_role? :admin
       can :read, Article
+      can :search, Article
       can :manage, Comment
       can :manage, User, id: user.id
 
     else
       can :read, Article
+      can :search, Article
       can :read, Comment
       can :manage, User, id: user.id
     end

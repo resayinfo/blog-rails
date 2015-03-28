@@ -82,7 +82,7 @@ class AdminsController < ApplicationController
   private
 
   def admin_params
-    params.require(:user).permit(:email, :first_name, :last_name, :password, :biography)
+    params.require(:user).permit(:email, :first_name, :last_name, :password, :biography, :avatar, :avatar_cache, :remove_avatar)
   end
 
 end

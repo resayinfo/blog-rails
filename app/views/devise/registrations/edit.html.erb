@@ -5,6 +5,19 @@
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= devise_error_messages! %>
 
+    <h3>
+      <%= f.label :avatar %>
+    </h3>
+    <p>
+      <%= f.label :avatar %>
+      <%= image_tag(@user.avatar.thumb.url) if @user.avatar? %>
+      <%= f.file_field :avatar %>
+      <%= f.hidden_field :avatar_cache %>
+      <%= f.label :remove_avatar do %>
+        <%= f.check_box :remove_avatar %> Remove Avatar
+      <% end %>
+    </p>
+
     <div><%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %></div>
 

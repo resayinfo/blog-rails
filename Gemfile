@@ -58,6 +58,10 @@ gem "font-awesome-rails"
 gem 'summernote-rails'
 gem 'codemirror-rails'
 
+# File upload
+gem 'rmagick'
+gem 'carrierwave-aws'
+
 # To solve the problems on the turbolinks
 gem 'jquery-turbolinks'
 

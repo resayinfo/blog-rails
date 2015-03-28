@@ -18,6 +18,8 @@ class User < ActiveRecord::Base
   has_many :articles, dependent: :destroy
   has_many :comments, dependent: :destroy
 
+  mount_uploader :avatar, AvatarUploader
+
   before_save :ensure_authentication_token
 
   def name

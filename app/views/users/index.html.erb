@@ -23,7 +23,7 @@
         <% else %>
           <td></td>
           <td>
-            <%= image_tag 'globe.gif', class:"side-pic" %>
+            <%= link_to image_tag(user.avatar.thumb.url, class: 'side-pic'), user_path(user)  %>
           </td>
         <% end %>
       <% end %>

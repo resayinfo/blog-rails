@@ -1,6 +1,9 @@
 <% if current_user.has_role? :god %>
 
   <div class="admins">
+
+    <h1><%= image_tag(@superadmin.avatar.thumb.url, class: 'side-pic') %></h1>
+
     <h1 class="page-header"><%= @superadmin.name %></h1>
 
     <h2 class="page-header"><%= mail_to @superadmin.email, @superadmin.email %></h2>

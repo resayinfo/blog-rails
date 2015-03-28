@@ -1,5 +1,7 @@
 
 <div class="admins">
+  <h1><%= image_tag(@user.avatar.thumb.url, class: 'side-pic') %></h1>
+
   <h1 class="page-header"><%= @user.name %></h1>
 
   <h2 class="page-header"><%= mail_to @user.email, @user.email %></h2>

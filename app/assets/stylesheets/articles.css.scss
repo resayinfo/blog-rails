@@ -52,12 +52,13 @@
   height: 180px;
   opacity: 1.0;
   background: none;
-  -webkit-filter: hue-rotate(165deg);
-  -moz-filter: hue-rotate(165deg);
-  filter: hue-rotate(165deg);
+  -webkit-filter: hue-rotate(1deg);
+  -moz-filter: hue-rotate(1deg);
+  filter: hue-rotate(1deg);
 }
 
 .side-pic:hover {
+  background: none;
   -webkit-filter: hue-rotate(195deg);
   -moz-filter: hue-rotate(195deg);
   filter: hue-rotate(195deg);

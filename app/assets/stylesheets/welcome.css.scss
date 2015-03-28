@@ -34,7 +34,7 @@ a {
 }
 
 h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, th a:hover, td a:hover, p a:hover, li a:hover, .page-header a:hover {
-  background: rgba(0, 255, 0, 0.4);
+  // background: rgba(0, 255, 0, 0.4);
   color: #FFFFFF;
   text-decoration:none;
   cursor:pointer;
@@ -116,6 +116,15 @@ input[type=checkbox] {
   background-color: #FFFFFF;
   height: 12px;
   width: 12px;
+}
+
+input[type=file] {
+  -webkit-appearance: file;
+  background-color: #504f50;
+  color: #FFFFFF;
+  width: 120px;
+  height: 60px;
+  margin: auto;
 }
 
 .radio, .checkbox {

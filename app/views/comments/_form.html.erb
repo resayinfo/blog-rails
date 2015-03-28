@@ -1,7 +1,7 @@
 <%= form_for([@article, @article.comments.build]) do |f| %>
 
   <p>
-    <%= f.text_area :body, class: "summernote", placeholder: '500,000 characters max' %>
+    <%= f.text_area :body, class: "summernote", placeholder: '1,000,000 characters max' %>
   </p>
   <p>
     <%= f.submit class: 'btn btn-default' %>

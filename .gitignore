@@ -26,3 +26,11 @@ config/database.yml
 latest.sql
 
 dumps/
+
+/public/uploads/*
+
+public/uploads/user/avatar/3/kangkodos.png
+
+public/uploads/user/avatar/3/small_thumb_kangkodos.png
+
+public/uploads/user/avatar/3/thumb_kangkodos.png

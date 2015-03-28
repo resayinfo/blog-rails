@@ -10,6 +10,19 @@
     </div>
   <% end %>
 
+  <h3>
+    <%= f.label :poster %>
+  </h3>
+  <p>
+    <%= f.label :poster %>
+    <%= image_tag(@article.poster.thumb.url) if @article.poster? %>
+    <%= f.file_field :poster %>
+    <%= f.hidden_field :poster_cache %>
+    <%= f.label :remove_poster do %>
+      <%= f.check_box :remove_poster %> Remove Poster
+    <% end %>
+  </p>
+
   <h3 class="articles-form-headers">
       <%= f.label :title %><br>
   </h3>

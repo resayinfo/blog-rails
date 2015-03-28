@@ -14,7 +14,7 @@
       <tbody>
         <% @superadmins.each do |superadmin| %>
         <tr>
-          <td><%= link_to superadmin.name, superadmin_path(superadmin) %></td>
+          <td><%= link_to image_tag(superadmin.avatar.small_thumb.url, class: 'side-pic'), superadmin_path(superadmin)  %> &nbsp; <%= link_to superadmin.name, superadmin_path(superadmin) %></td>
         </tr>
         <% end %>
       </tbody>

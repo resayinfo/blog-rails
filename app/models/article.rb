@@ -8,4 +8,7 @@ class Article < ActiveRecord::Base
                     length: { minimum: 1, maximum: 25 }
   validates :text, presence: true,
                     length: { minimum: 1, maximum: 10000000 }
+
+  mount_uploader :poster, PosterUploader
+
 end

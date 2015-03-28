@@ -19,7 +19,7 @@
       </tr>
       <% @articles.each do |article| %>
         <tr>
-          <td><%= link_to article.user.name, article.user %></td>
+          <td><%= link_to image_tag(article.user.avatar.small_thumb.url, class: 'side-pic'), article.user  %> &nbsp; <%= link_to article.user.name, article.user %></td>
           <td><%= link_to article.title, article_path(article) %></td>
           <!-- <td><%= article.text %></td> -->
           <% if can? :manage, Article %>
@@ -29,7 +29,7 @@
           <% else %>
             <td></td>
             <td>
-              <%= link_to image_tag(article.user.avatar.thumb.url, class: 'side-pic'), article_path(article)  %>
+              <%= link_to image_tag(article.poster.thumb.url, class: 'side-pic'), article_path(article)  %>
             </td>
           <% end %>
         </tr>

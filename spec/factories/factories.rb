@@ -39,7 +39,6 @@ FactoryGirl.define do
 
 
   factory :article do
-    author "Krusty the Klown"
     title "Springfield"
     text "Elementary"
   end
@@ -49,7 +48,6 @@ FactoryGirl.define do
 
 
   factory :comment do
-    commenter "Moe"
     body "Shelbyville"
   end
 

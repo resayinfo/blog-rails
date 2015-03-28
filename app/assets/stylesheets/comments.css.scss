@@ -23,6 +23,7 @@
   padding-left: 180px;
   text-align: left;
   font-family: "Lobster";
+  font-size: 12px;
 }
 
 .comments {
@@ -37,6 +38,10 @@
   padding-right:180px;
   text-align: left;
   overflow: hidden;
+}
+
+.comments-lefty p {
+  font-size: 18px;
 }
 
 .comments-lefty iframe {

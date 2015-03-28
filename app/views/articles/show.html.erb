@@ -1,5 +1,5 @@
 <div class="articles">
-  <h1 class="page-header" align="center">"<%= @article.title %>"<br>By: <%= @article.user.name %></h1>
+  <h1 class="page-header" align="center">"<%= @article.title %>"<br>By: <%= link_to @article.user.name, @article.user %></h1>
   <h2 class="articles-show-updated-sub-header">Created <%= @article.created_at.strftime('%b %-d, %Y, %l:%M %p, %Z') %><br>Updated <%= @article.updated_at.strftime('%b %-d, %Y, %l:%M %p, %Z') if @article.updated_at.present? %></h2>
 
     <div class="articles-show-lefty">

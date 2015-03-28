@@ -5,8 +5,8 @@ describe "articles/index" do
   context "with 2 articles" do
     before(:each) do
       assign(:articles, [
-        Article.create!(:author => "Apu", :title => "Sewing", :text => "Sewing is fun"),
-        Article.create!(:author => "Willy", :title => "Digging", :text => "Digging is fun")
+        Article.create!(:title => "Sewing", :text => "Sewing is fun"),
+        Article.create!(:title => "Digging", :text => "Digging is fun")
       ])
     end
 

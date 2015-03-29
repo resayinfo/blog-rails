@@ -1,10 +1,17 @@
-
 <div class="admins">
-  <h1><%= image_tag(@user.avatar.thumb.url, class: 'side-pic') %></h1>
 
   <h1 class="page-header"><%= @user.name %></h1>
 
   <h2 class="page-header"><%= mail_to @user.email, @user.email %></h2>
+
+  <div class="ih-item circle effect11 top_to_bottom"><a href="#">
+    <%= image_tag @user.avatar.thumb.url, class: 'img' %>
+    <div class="info">
+      <div class="info-back">
+        <h3><%= image_tag @user.avatar.thumb.url, class: 'ih-item square effect15 top_to_bottom' %></h3>
+      </div><!-- .info-back -->
+    </div><!-- .info --></a>
+  </div><!-- .ih-item circle effect18 top_to_bottom -->
 
   <div class="articles-show-lefty">
     <%= raw(@user.biography) %>
@@ -14,6 +21,7 @@
     <p><%= link_to 'back', users_path(@users), class: 'btn btn-default' %> &nbsp; <%= link_to 'Edit', edit_user_path(@user), class: 'btn btn-default' %> &nbsp; <%= link_to 'Delete', user_path(@user) , class: 'btn btn-danger',
       method: :delete, data: { confirm: 'Are you sure?' } %></p>
   <% end %>
+
 </div><!--. admins -->
 
 

@@ -8,7 +8,7 @@
   <tr>
     <th class="admins-index-table-headlines">Name</th>
     <th class="admins-index-table-headlines">Email</th>
-    <th colspan="2">
+    <th colspan="2"></th>
   </tr>
   <% @users.each do |user| %>
     <tr>
@@ -23,7 +23,14 @@
         <% else %>
           <td></td>
           <td>
-            <%= link_to image_tag(user.avatar.thumb.url, class: 'side-pic'), user_path(user)  %>
+            <div class="ih-item circle effect11 top_to_bottom"><a href="#">
+              <%= image_tag user.avatar.thumb.url, class: 'img' %>
+              <div class="info">
+                <div class="info-back">
+                  <h3><%= image_tag user.avatar.thumb.url, class: 'ih-item square effect15 top_to_bottom' %></h3>
+                </div><!-- .info-back -->
+              </div><!-- .info --></a>
+            </div><!-- .ih-item circle effect18 top_to_bottom -->
           </td>
         <% end %>
       <% end %>

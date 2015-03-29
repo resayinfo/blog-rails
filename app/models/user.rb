@@ -13,14 +13,14 @@ class User < ActiveRecord::Base
   validates :password, length: {minimum: 8, maximum: 128}, on: :update, allow_blank: true
 
   # validates :biography, presence: true,
-  #                   length: { minimum: 1, maximum: 100000000 }
-
-  has_many :articles, dependent: :destroy
-  has_many :comments, dependent: :destroy
+  #                   length: { minimum: 1, maximum: 1000000 }
 
   mount_uploader :avatar, AvatarUploader
 
   before_save :ensure_authentication_token
+
+  has_many :articles, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   def name
     "#{self.first_name} #{self.last_name}"

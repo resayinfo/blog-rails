@@ -5,6 +5,7 @@ FactoryGirl.define do
     last_name 'Wighum'
     email 'cw@email.com'
     password 'password'
+    biography 'My name is'
   end
 
 
@@ -13,6 +14,7 @@ FactoryGirl.define do
     last_name 'Smithers'
     email 'mb@email.com'
     password 'password'
+    biography 'My name is'
   end
 
 
@@ -21,6 +23,7 @@ FactoryGirl.define do
     last_name 'Burns'
     email 'mb@email.com'
     password 'password'
+    biography 'My name is'
   end
 
   factory :invalid_admin_user, class: User do
@@ -33,6 +36,7 @@ FactoryGirl.define do
     email 'jb@email.com'
     password 'password'
     after(:create) {|user| user.add_role(:god)}
+    biography 'My name is'
   end
 
   factory :invalid_god_user, class: User do

@@ -2,29 +2,6 @@
 
   <h1 class="page-header" align="center">Rails Blog</h1>
 
-  <h2 class="page-header">Articles</h2>
-  <div class="articles">
-    <%= render partial: 'articles/search', locals: { q: '' } %>
-  </div>
-  <table>
-    <tr>
-      <th class="articles-index-table-headlines">Author</th>
-      <th class="articles-index-table-headlines">Title</th>
-      <th colspan="2">
-        <%= link_to 'Create a New Article', new_article_path, class: 'btn btn-success' %>
-      </th>
-    </tr>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= link_to article.user.name, article.user %></td>
-        <td><%= link_to article.title, article_path(article) %></td>
-        <td><%= link_to 'Edit', edit_article_path(article), class: 'btn btn-default' %></td>
-        <td><%= link_to 'Delete', article_path(article) , class: 'btn btn-danger',
-        method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </table>
-
   <h2 class="page-header">Super Admins</h2>
   <div class="admins">
     <%= render partial: 'superadmins/search', locals: { q: '' } %>
@@ -56,9 +33,7 @@
     <tr>
       <th class="admins-index-table-headlines">Name</th>
       <th class="admins-index-table-headlines">Email</th>
-      <th colspan="2">
-        <%= link_to 'New Administrator', new_admin_path, class: 'btn btn-success' %>
-      </th>
+      <th colspan="2"></th>
     </tr>
     <% @admins.each do |admin| %>
       <tr>
@@ -96,57 +71,22 @@
   </table>
 
 
-<% elsif current_user.has_role? :superadmin %>
+<% elsif current_user.has_role? :superadmin or current_user.has_role? :admin %>
 
 
   <h1 class="page-header" align="center">Rails Blog</h1>
 
-  <h2 class="page-header">Admins</h2>
-  <div class="admins">
-    <%= render partial: 'admins/search', locals: { q: '' } %>
-  </div>
-  <table>
-    <tr>
-      <th class="admins-index-table-headlines">Name</th>
-      <th class="admins-index-table-headlines">Email</th>
-      <th colspan="2">
-        <%= link_to 'New Administrator', new_admin_path, class: 'btn btn-success' %>
-      </th>
-    </tr>
-    <% @admins.each do |admin| %>
-      <tr>
-        <td><%= link_to admin.name, admin_path(admin) %></td>
-        <td><%= mail_to admin.email, admin.email %></td>
-        <td><%= link_to 'Edit', edit_admin_path(admin), class: 'btn btn-default' %></td>
-        <td><%= link_to 'Delete', admin_path(admin) , class: 'btn btn-danger',
-        method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </table>
-
-  <h2 class="page-header">Users</h2>
-  <div class="admins">
-    <%= render partial: 'users/search', locals: { q: '' } %>
-  </div>
-  <table>
-    <tr>
-      <th class="admins-index-table-headlines">Name</th>
-      <th class="admins-index-table-headlines">Email</th>
-      <th colspan="2"></th>
-    </tr>
-    <% @users.each do |user| %>
-    <tr>
-      <% if user.has_role? :admin or user.has_role? :superadmin or user.has_role? :god %>
-      <% else %>
-        <td><%= link_to user.name, user_path(user) %></td>
-        <td><%= mail_to user.email, user.email %></td>
-        <td><%= link_to 'Edit', edit_user_registration_path, class: 'btn btn-default' %></td>
-        <td><%= link_to 'Delete', user_path(user) , class: 'btn btn-danger',
-                method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <% end %>
-    </tr>
-    <% end %>
-  </table>
+  <h2 class="page-header" align="left">Bubbles</h2>
+  <div class="bubbles">
+    <ul class="bubbles-list">
+      <li><a href= "http://www.couriernewjersey.com/tony-php/tony.php" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>
+      <li><a href= "http://www.couriernewjersey.com/asbury-game-html5/asbury.html" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>
+      <li><a href= "https://github.com/CMBmaseda" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>
+      <li><a href= "http://www.couriernewjersey.com/tony-php/tony.php" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>
+      <li><a href= "http://www.couriernewjersey.com/asbury-game-html5/asbury.html" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>
+      <li><a href= "https://github.com/CMBmaseda" target="_blank"><%= image_tag 'simpsons.png', class:'welcome-pic-1' %></a></li>
+    </ul><!--. bubbles-list -->
+  </div><!--. bubbles -->
 
 
 <% else %>
@@ -166,79 +106,94 @@
 
   <iframe title="YouTube video player" class="welcome-vid-1" src="https://www.youtube.com/embed/JHu46QznBI4?rel=0" frameborder="0" allowfullscreen></iframe>
 
-  <h2 class="page-header">iHover</h2>
+  <h2 class="page-header" align="left">iHover</h2>
 
-  <!-- BEGIN EFFECT 18 -->
   <div class="row" align="center">
     <div class="col-sm-6">
       <!-- normal -->
-      <div class="ih-item circle effect18 bottom_to_top"><a href="#">
+      <div class="ih-item square effect11 top_to_bottom"><a href="#">
         <%= image_tag 'simpsons.png', class:"img" %>
         <div class="info">
-          <div class="info-back">
-            <h3>Heading here</h3>
-            <p>Description goes here</p>
-          </div>
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
         </div></a>
       </div>
       <!-- end normal -->
     </div>
     <div class="col-sm-6">
       <!-- colored -->
-      <div class="ih-item circle colored effect18 bottom_to_top"><a href="#">
+      <div class="ih-item square colored effect11 top_to_bottom"><a href="#">
         <%= image_tag 'simpsons.png', class:"img" %>
         <div class="info">
-          <div class="info-back">
-            <h3>Heading here</h3>
-            <p>Description goes here</p>
-          </div>
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
         </div></a>
       </div>
-      <!-- end colored-->
+      <!-- end colored -->
     </div>
-  </div><!-- end row-->
-  <!-- end Bottom to top -->
-  <!-- Left to right -->
+  </div><!-- End Row -->
+  <!-- end Left to right-->
+  <!-- Right to left-->
   <div class="row" align="center">
     <div class="col-sm-6">
       <!-- normal -->
-      <div class="ih-item circle effect18 left_to_right"><a href="#">
+      <div class="ih-item square effect11 bottom_to_top"><a href="#">
         <%= image_tag 'simpsons.png', class:"img" %>
         <div class="info">
-          <div class="info-back">
-            <h3>Heading here</h3>
-            <p>Description goes here</p>
-          </div>
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
         </div></a>
       </div>
       <!-- end normal -->
     </div>
     <div class="col-sm-6">
       <!-- colored -->
-      <div class="ih-item circle colored effect18 left_to_right"><a href="#">
+      <div class="ih-item square colored effect11 bottom_to_top"><a href="#">
         <%= image_tag 'simpsons.png', class:"img" %>
         <div class="info">
-          <div class="info-back">
-            <h3>Heading here</h3>
-            <p>Description goes here</p>
-          </div>
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
         </div></a>
       </div>
-      <!-- end colored-->
+      <!-- end colored -->
     </div>
-  </div><!-- end row-->
-  <!-- end Left to right -->
-  <!-- Right to left  -->
+  </div><!-- End Row -->
+  <!-- end Right to left-->
+  <!-- Left to right-->
+  <div class="row" align="center">
+    <div class="col-sm-6">
+      <!-- normal -->
+      <div class="ih-item circle effect11 left_to_right"><a href="#">
+        <%= image_tag 'simpsons.png', class:"img" %>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a>
+      </div>
+      <!-- end normal -->
+    </div>
+    <div class="col-sm-6">
+      <!-- colored -->
+      <div class="ih-item circle colored effect15 left_to_right"><a href="#">
+        <%= image_tag 'simpsons.png', class:"img" %>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a>
+      </div>
+      <!-- end colored -->
+    </div>
+  </div><!-- End Row -->
+  <!-- end Left to right-->
+  <!-- Right to left-->
   <div class="row" align="center">
     <div class="col-sm-6">
       <!-- normal -->
       <div class="ih-item circle effect18 right_to_left"><a href="#">
         <%= image_tag 'simpsons.png', class:"img" %>
         <div class="info">
-          <div class="info-back">
-            <h3>Heading here</h3>
-            <p>Description goes here</p>
-          </div>
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
         </div></a>
       </div>
       <!-- end normal -->
@@ -248,48 +203,15 @@
       <div class="ih-item circle colored effect18 right_to_left"><a href="#">
         <%= image_tag 'simpsons.png', class:"img" %>
         <div class="info">
-          <div class="info-back">
-            <h3>Heading here</h3>
-            <p>Description goes here</p>
-          </div>
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
         </div></a>
       </div>
-      <!-- end colored-->
+      <!-- end colored -->
     </div>
-  </div><!-- end row-->
-  <!-- end Right to left  -->
-  <!-- Top to bottom -->
-  <div class="row" align="center">
-    <div class="col-sm-6">
-      <!-- normal -->
-      <div class="ih-item circle effect18 top_to_bottom"><a href="#">
-        <%= image_tag 'simpsons.png', class:"img" %>
-        <div class="info">
-          <div class="info-back">
-            <h3>Heading here</h3>
-            <p>Description goes here</p>
-          </div>
-        </div></a>
-      </div>
-      <!-- end normal -->
-    </div>
-    <div class="col-sm-6">
-      <!-- colored -->
-      <div class="ih-item circle colored effect18 top_to_bottom"><a href="#">
-        <%= image_tag 'simpsons.png', class:"img" %>
-        <div class="info">
-          <div class="info-back">
-            <h3>Heading here</h3>
-            <p>Description goes here</p>
-          </div>
-        </div></a>
-      </div>
-      <!-- end colored-->
-    </div>
-  </div><!-- end row-->
-  <!-- end Top to bottom -->
-  <!-- END EFFECT 18 -->
-
+  </div><!-- End Row -->
+  <!-- end Right to left-->
+  <!-- Left to right-->
 
 <% end %>
 

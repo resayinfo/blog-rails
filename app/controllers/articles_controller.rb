@@ -11,9 +11,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    # @article = Article.new(article_params)
     @article = Article.new(article_params) # Assign first
-    @article.user = current_user        # Then access attributes/associations
+    @article.user = current_user # Then access attributes/associations
 
     if @article.save
       redirect_to @article

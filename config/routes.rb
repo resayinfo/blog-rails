@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'users/index'
-
   devise_for :users
   resources :users do
     get 'search', on: :collection
@@ -17,7 +15,7 @@ Rails.application.routes.draw do
 
     resources :users
 
-    resources :articles, only: [:index, :create, :destroy, :update, :show] do
+    resources :articles do
         resources :comments, only: [:create]
         put :reorder, on: :collection
     end

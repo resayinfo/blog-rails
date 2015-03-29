@@ -2,14 +2,23 @@
   <h1 class="page-header" align="center">"<%= @article.title %>"<br><%= link_to image_tag(@article.user.avatar.small_thumb.url, class: 'side-pic'), @article.user  %> &nbsp; <%= link_to @article.user.name, @article.user %></h1>
   <h2 class="articles-show-updated-sub-header">Created <%= @article.created_at.strftime('%b %-d, %Y, %l:%M %p, %Z') %><br>Updated <%= @article.updated_at.strftime('%b %-d, %Y, %l:%M %p, %Z') if @article.updated_at.present? %></h2>
 
-    <div class="articles-show-lefty">
-      <%= image_tag(@article.poster.thumb.url, class: 'side-pic') %>
-      <br><%= raw(@article.text) %>
-    </div>
+  <div class="ih-item circle effect15 top_to_bottom"><a href="#">
+    <%= image_tag @article.poster.thumb.url, class: 'img' %>
+    <div class="info">
+      <div class="info-back">
+        <h3><%= image_tag @article.poster.thumb.url, class: 'ih-item square effect15 top_to_bottom' %></h3>
+      </div><!-- .info-back -->
+    </div><!-- .info --></a>
+  </div><!-- .ih-item circle effect18 top_to_bottom -->
+
+  <div class="articles-show-lefty">
+    <h1></h1>
+    <%= raw(@article.text) %>
+  </div>
 
   <table>
     <tr>
-      <% if current_user.has_role? :superadmin or current_user.has_role? :god %>
+      <% if current_user.has_role? :god or current_user == @article.user %>
         <td><%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-default' %></td>
         <td><%= link_to 'Delete', article_path(@article) , class: 'btn btn-danger',
                                 method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -17,8 +26,10 @@
     </tr>
   </table>
 
-  <h2 class="comments">Comments</h2>
-  <%= render @article.comments %>
+  <% if @article.comments.present? %>
+    <h2 class="comments">Comments</h2>
+    <%= render @article.comments %>
+  <% end %>
   <% if can? :manage, Comment %>
     <h3 class="comment">Add a comment:</h3>
     <%= render "comments/form" %>

@@ -1,5 +1,6 @@
 <% if current_user.has_role? :god %>
 
+
   <div class="admins">
 
     <h1 class="page-header"><%= @superadmin.name %></h1>
@@ -25,11 +26,26 @@
     <% end %>
   </div><!--. admins -->
 
+  <h2 class="page-header" align="left">Articles</h2>
+  <table>
+    <% @superadmin.articles.each do |article| %>
+      <tr>
+        <td><%= link_to image_tag(article.poster.small_thumb.url, class: 'side-pic'), article_path(article)  %> &nbsp; <%= link_to article.title, article_path(article) %></td>
+          <td><%= link_to 'Edit', edit_article_path(article), class: 'btn btn-default' %></td>
+          <td><%= link_to 'Delete', article_path(article) , class: 'btn btn-danger',
+                          method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </table>
+
+
 <% else %>
+
 
   <h1 class="page-header" align="center">You are not authorized</h1>
 
   <p align="center">Only the system admin can view and edit super admins.</p>
+
 
 <% end %>
 

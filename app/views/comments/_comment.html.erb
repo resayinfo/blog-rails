@@ -1,3 +1,5 @@
+<%#= comment.user.name %>
+
 <h3 class="commenter"><%= link_to image_tag(comment.article.user.avatar.small_thumb.url, class: 'side-pic'), comment.article.user  %> &nbsp; <%= link_to comment.article.user.name, comment.article.user %></h3>
 
 <p class="commented"><%= comment.created_at.strftime('%b %-d, %Y, %l:%M %p, %Z') %></p>
@@ -6,7 +8,7 @@
   <%= raw(comment.body) %>
 </div>
 
-<% if current_user.has_role? :superadmin or current_user.has_role? :god %>
+<% if current_user.has_role? :god or current_user == comment.article.user %>
   <p class="comments-lefty">
     <%= link_to 'Delete', [comment.article, comment], class: 'btn btn-danger',
                  method: :delete,

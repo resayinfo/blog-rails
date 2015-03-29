@@ -5,15 +5,15 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :email, presence: true
+  validates :first_name, presence: true, length: {minimum: 1, maximum: 128}
+  validates :last_name, presence: true, length: {minimum: 1, maximum: 128}
+  validates :email, presence: true, length: {minimum: 1, maximum: 128}
 
   validates :password, presence: true, length: {minimum: 8, maximum: 128}, on: :create
   validates :password, length: {minimum: 8, maximum: 128}, on: :update, allow_blank: true
 
-  # validates :biography, presence: true,
-  #                   length: { minimum: 1, maximum: 1000000 }
+  validates :biography, presence: true,
+                    length: { minimum: 1, maximum: 1000000000 }
 
   mount_uploader :avatar, AvatarUploader
 

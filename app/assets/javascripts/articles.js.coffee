@@ -23,7 +23,7 @@ $ ->
       ['para', ['ul', 'ol', 'paragraph']]
       ['height', ['height']]
       ['table', ['table']]
-      ['insert', ['link', 'video', 'picture', 'hr']]
+      ['insert', ['link', 'video', 'hr']]
       ['view', ['fullscreen', 'codeview']]
       ['help', ['help']]
     ]

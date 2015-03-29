@@ -3,7 +3,8 @@
   <h2 class="articles-show-updated-sub-header">Created <%= @article.created_at.strftime('%b %-d, %Y, %l:%M %p, %Z') %><br>Updated <%= @article.updated_at.strftime('%b %-d, %Y, %l:%M %p, %Z') if @article.updated_at.present? %></h2>
 
     <div class="articles-show-lefty">
-      <%= raw(@article.text) %>
+      <%= image_tag(@article.poster.thumb.url, class: 'side-pic') %>
+      <br><%= raw(@article.text) %>
     </div>
 
   <table>

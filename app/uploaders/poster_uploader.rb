@@ -10,9 +10,6 @@ class PosterUploader < CarrierWave::Uploader::Base
   # storage :file
   # storage :fog
 
-  # Override the directory where uploaded files will be stored.
-  # This is a sensible default for uploaders that are meant to be mounted:
-
   # HEROKU: uploads must be stored on S3 and cannot be cached in the public directory
   def cache_dir
     "#{Rails.root}/tmp/uploads"

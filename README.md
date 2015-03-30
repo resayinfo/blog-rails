@@ -1,19 +1,59 @@
-Blog-Ruby-On-Rails
-===================
+# Rails Blog
 
+By Tony Maseda
 
-A Rails 4.1 blog with iOS api's, devise, rolify, cancan, rspec, summernote, bootstrap css/js, iHover + morphing-buttons css/js, jQuery, google fonts, search and a gitignore.
+## Ruby version
 
-$ cd blog-rails
+2.0.0
 
+## System dependencies
+
+* Ruby on Rails 4.1.4
+* PostgreSQL
+
+## Configuration
+
+Install required gems.
+```
+$ bundle install
+```
+
+## Database creation
+
+```
+$ rake db:create
+```
+
+## Database initialization
+
+```
+# Development
 $ rake db:migrate
 
-$ rake db:seed
+# Production
+$ heroku run rake db:migrate
+```
 
-$ bundle exec rspec (14 examples, 0 failures .. unfinished)
+## How to run the test suite
 
-$ rails s
+```
+$ bundle exec rspec
+```
 
-log in with seeds, or create user account
+## Services
 
-Note: problem with uploading an image/video when creating (not updating) new admins + superadmins
+None at this time.
+
+## Deployment instructions
+
+```
+# Production
+$ git push heroku master
+```
+
+## TODO
+
+```
+1. Associate user with comment ( comment.user )
+2. In Heroku, Carrierwave uploads must be stored on S3 and cannot be cached in the public directory
+```

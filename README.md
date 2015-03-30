@@ -59,4 +59,5 @@ $ git push heroku master
 3. Make iHover elements dynamic links
 4. Fix alignment of Authors in articles#index
 5. Move morphing js to application#layout if possible
+6. Style avatar/poster forms
 ```

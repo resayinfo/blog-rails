@@ -10,7 +10,7 @@ class SuperadminsController < ApplicationController
   end
 
   def index
-    @superadmin = User.with_role(:superadmin).order('users.last_name, users.first_name')
+    @superadmin = User.with_role(:superadmin).order('users.last_name, users.first_name').paginate(:page => params[:page], :per_page => 10)
   end
 
   def show

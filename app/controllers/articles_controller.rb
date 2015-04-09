@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   load_and_authorize_resource :article
 
   def index
-    @articles = Article.all.order(:title)
+    @articles = Article.all.order(:title).paginate(:page => params[:page], :per_page => 10)
   end
 
   def new

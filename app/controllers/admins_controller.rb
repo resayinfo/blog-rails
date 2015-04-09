@@ -10,7 +10,7 @@ class AdminsController < ApplicationController
   end
 
   def index
-    @admin = User.with_role(:admin).order('users.last_name, users.first_name')
+    @admin = User.with_role(:admin).order('users.last_name, users.first_name').paginate(:page => params[:page], :per_page => 10)
   end
 
   def show

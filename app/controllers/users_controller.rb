@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @users = User.all.order('users.last_name, users.first_name')
+    @users = User.all.order('users.last_name, users.first_name').paginate(:page => params[:page], :per_page => 20)
   end
 
   def show

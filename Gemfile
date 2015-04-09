@@ -49,6 +49,9 @@ gem "rolify"
 
 gem 'simple_form'
 
+# Pagination
+gem 'will_paginate', '~> 3.0.6'
+
 # You'll need to include the following dependencies of Summernote
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'

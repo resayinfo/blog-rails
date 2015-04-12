@@ -56,7 +56,6 @@ $ git push heroku master
 ```
 1. Associate user with comment ( comment.user )
 2. In Heroku, Carrierwave uploads must be stored on S3 and cannot be cached in the public directory
-3. Make iHover elements dynamic links
-4. Move morphing js to application#layout if possible
-5. Make admin and superadmin index tables' sorting work
+3a. Fix admin and superadmin index tables' sorting + overall default sorting
+3b. Add caret for current column sorting
 ```

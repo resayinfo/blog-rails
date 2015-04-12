@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
 
+  helper_method :sort_column, :sort_direction
+
   def index
-    @users = User.all.order('users.last_name, users.first_name').paginate(:page => params[:page], :per_page => 20)
+    @users = User.order(sort_column + " " + sort_direction).paginate(:page => params[:page], :per_page => 10)
   end
 
   def show
@@ -53,6 +55,14 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def sort_column
+    User.column_names.include?(params[:sort]) ? params[:sort] : "last_name"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
 
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :password, :biography, :avatar, :avatar_cache, :remove_avatar)

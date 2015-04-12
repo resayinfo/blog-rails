@@ -6,8 +6,8 @@
 
 <table>
   <tr>
-    <th class="admins-index-table-headlines">Name</th>
-    <th class="admins-index-table-headlines">Email</th>
+    <th class="admins-index-table-headlines"><%= sortable "last_name", "Name" %></th>
+    <th class="admins-index-table-headlines"><%= sortable "email", "Email" %></th>
     <th colspan="2"></th>
   </tr>
   <% @users.each do |user| %>

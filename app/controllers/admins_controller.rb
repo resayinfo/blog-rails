@@ -5,12 +5,14 @@ class AdminsController < ApplicationController
   before_action :cancan_rails4_hack
   load_and_authorize_resource :admin, class: User.with_role(:admin)
 
+  helper_method :sort_column, :sort_direction
+
   def cancan_rails4_hack
     @admin = User.new
   end
 
   def index
-    @admin = User.with_role(:admin).order('users.last_name, users.first_name').paginate(:page => params[:page], :per_page => 10)
+    @admin = User.with_role(:admin).order(sort_column + " " + sort_direction).paginate(:page => params[:page], :per_page => 10)
   end
 
   def show
@@ -80,6 +82,14 @@ class AdminsController < ApplicationController
   end
 
   private
+
+  def sort_column
+    User.column_names.include?(params[:sort]) ? params[:sort] : "last_name"
+  end
+
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
 
   def admin_params
     params.require(:user).permit(:email, :first_name, :last_name, :password, :biography, :avatar, :avatar_cache, :remove_avatar)

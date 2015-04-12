@@ -77,7 +77,9 @@
   to { -o-transform: rotate(350deg) scale(0.806) skew(-3deg) translate(-9px); }
 }
 
-.articles-index-table-headlines {
+.articles-index-table-headlines, .articles-index-table-headlines a {
+  font-family: 'chewy';
+  font-size: 30px;
   color: rgb(77, 87, 97);
 }
 

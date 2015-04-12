@@ -9,7 +9,7 @@
     <table>
       <tr>
         <th class="articles-index-table-headlines">Author</th>
-        <th class="articles-index-table-headlines">Title</th>
+        <th class="articles-index-table-headlines"><%= sortable "title", "Title" %></th>
         <!-- <th class="articles-index-table-headlines">Text</th> -->
         <th colspan="2">
           <% if can? :create, Article %>

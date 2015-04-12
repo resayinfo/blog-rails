@@ -29,13 +29,15 @@
           <% else %>
             <td></td>
             <td>
-              <div class="ih-item circle effect15 top_to_bottom"><a href="#">
-                <%= image_tag article.poster.thumb.url, class: 'img' %>
-                <div class="info">
-                  <div class="info-back">
-                    <h3><%= image_tag article.poster.thumb.url, class: 'ih-item square effect15 top_to_bottom' %></h3>
-                  </div><!-- .info-back -->
-                </div><!-- .info --></a>
+              <div class="ih-item circle effect20 top_to_bottom">
+                <a href="#">
+                  <%= image_tag article.poster.thumb.url, class: 'img' %>
+                  <div class="info">
+                    <div class="info-back">
+                      <h3><%= image_tag article.poster.thumb.url, class: 'ih-item square' %></h3>
+                    </div><!-- .info-back -->
+                  </div><!-- .info -->
+                </a>
               </div><!-- .ih-item circle effect18 top_to_bottom -->
             </td>
           <% end %>

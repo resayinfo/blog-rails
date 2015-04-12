@@ -60,21 +60,21 @@
   -webkit-filter: hue-rotate(195deg);
   -moz-filter: hue-rotate(195deg);
   filter: hue-rotate(195deg);
-  -webkit-animation: cssAnimation 4.3348s 1 ease;
-  -moz-animation: cssAnimation 4.3348s 1 ease;
-  -o-animation: cssAnimation 4.3348s 1 ease;
-}
-@-webkit-keyframes cssAnimation {
+  -webkit-animation: cssAnimation 4.5s 1 ease;
+  -moz-animation: cssAnimation 4.5s 1 ease;
+  -o-animation: cssAnimation 4.5s 1 ease;
+  }
+  @-webkit-keyframes cssAnimation {
   from { -webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
-  to { -webkit-transform: rotate(350deg) scale(0.806) skew(-3deg) translate(-9px); }
-}
-@-moz-keyframes cssAnimation {
+  to { -webkit-transform: rotate(4deg) scale(1.2) skew(3deg) translate(10px); }
+  }
+  @-moz-keyframes cssAnimation {
   from { -moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
-  to { -moz-transform: rotate(350deg) scale(0.806) skew(-3deg) translate(-9px); }
-}
-@-o-keyframes cssAnimation {
+  to { -moz-transform: rotate(4deg) scale(1.2) skew(3deg) translate(10px); }
+  }
+  @-o-keyframes cssAnimation {
   from { -o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
-  to { -o-transform: rotate(350deg) scale(0.806) skew(-3deg) translate(-9px); }
+  to { -o-transform: rotate(4deg) scale(1.2) skew(3deg) translate(10px); }
 }
 
 .articles-index-table-headlines, .articles-index-table-headlines a {
@@ -127,20 +127,19 @@
 
 .spinner {
   color: #FFFF00;
-  -webkit-animation: cssAnimation 4.3348s 1 ease;
-  -moz-animation: cssAnimation 4.3348s 1 ease;
-  -o-animation: cssAnimation 4.3348s 1 ease;
-}
-@-webkit-keyframes cssAnimation {
+  -webkit-animation: cssAnimation 4.5s 1 ease;
+  -moz-animation: cssAnimation 4.5s 1 ease;
+  -o-animation: cssAnimation 4.5s 1 ease;
+  }
+  @-webkit-keyframes cssAnimation {
   from { -webkit-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
-  to { -webkit-transform: rotate(350deg) scale(0.806) skew(-3deg) translate(-9px); }
-}
-@-moz-keyframes cssAnimation {
+  to { -webkit-transform: rotate(4deg) scale(1.2) skew(3deg) translate(10px); }
+  }
+  @-moz-keyframes cssAnimation {
   from { -moz-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
-  to { -moz-transform: rotate(350deg) scale(0.806) skew(-3deg) translate(-9px); }
-}
-@-o-keyframes cssAnimation {
+  to { -moz-transform: rotate(4deg) scale(1.2) skew(3deg) translate(10px); }
+  }
+  @-o-keyframes cssAnimation {
   from { -o-transform: rotate(4deg) scale(1) skew(1deg) translate(10px); }
-  to { -o-transform: rotate(350deg) scale(0.806) skew(-3deg) translate(-9px); }
-
+  to { -o-transform: rotate(4deg) scale(1.2) skew(3deg) translate(10px); }
 }

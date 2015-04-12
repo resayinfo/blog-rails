@@ -502,33 +502,7 @@ label {
   box-shadow: none;
 }
 
-.ih-item.circle.effect10 .img:hover {
-  -webkit-filter: hue-rotate(180deg);
-  -moz-filter: hue-rotate(180deg);
-  filter: hue-rotate(180deg);
-}
-
-.ih-item.circle.effect10.colored .info {
-  background: rgba(253,251,253,0.3);
-  color: rgba(253,251,253,0.9);
-  font-family:"Nunito";
-}
-
-.ih-item.circle.effect10 .info h3 {
-  color: rgba(253,251,253,0.9);
-  font-family:"Nunito";
-  font-size: 18px;
-  margin-bottom: 2px;
-}
-
-.ih-item.circle.effect10 .info p {
-  color: rgba(253,251,253,0.9);
-  font-family:"Nunito";
-  font-size: 14px;
-  border-top: 0px;
-}
-
-.ih-item.circle .img, .ih-item.square .img {
+.ih-item.circle .img, .ih-item.square.effect15 .img {
   width: 240px;
   height: 180px;
 }

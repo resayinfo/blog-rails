@@ -33,6 +33,13 @@
     <div><%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
 
+      <h3 class="articles-form-headers">
+          <%= f.label :biography %><br>
+      </h3>
+      <p>
+        <%= f.text_area :biography, class: "summernote", placeholder: 'maximum: 1,000,000' %>
+      </p>
+
     <br><div><%= f.submit "Sign up", class: 'btn btn-default' %></div><br>
   <% end %>
 

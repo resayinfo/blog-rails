@@ -18,6 +18,15 @@ Install required gems.
 $ bundle install
 ```
 
+Configuration settings are set in these files:
+* (private)
+
+To set environment variables with figaro:
+```
+# Production
+$ figaro heroku:set -a (private)
+```
+
 ## Database creation
 
 ```

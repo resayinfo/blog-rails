@@ -70,6 +70,8 @@
     <% end %>
   </table>
 
+  <div class="pagination"><%= will_paginate @users %></div>
+
 
 <% elsif current_user.has_role? :superadmin or current_user.has_role? :admin %>
 

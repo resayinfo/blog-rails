@@ -1,7 +1,4 @@
 class AdminsController < ApplicationController
-  # before_action :authenticate_user!
-  # load_and_authorize_resource :admin, class: 'User'
-
   before_action :cancan_rails4_hack
   load_and_authorize_resource :admin, class: User.with_role(:admin)
 
@@ -12,7 +9,7 @@ class AdminsController < ApplicationController
   end
 
   def index
-    @admin = User.with_role(:admin).order(sort_column + " " + sort_direction).paginate(:page => params[:page], :per_page => 10)
+    @admin = User.with_role(:admin).order(sort_column + " " + sort_direction).paginate(:page => params[:page], :per_page => 20)
   end
 
   def show
@@ -75,16 +72,16 @@ class AdminsController < ApplicationController
     @query = params[:q]
     @admins = []
     if @query.present?
-      @admins =  User.with_role(:admin).where("lower(first_name) LIKE ? OR lower(last_name) LIKE ?", "%#{@query.downcase}%", "%#{@query.downcase}%")
+      @admins =  User.with_role(:admin).where("lower(first_name) LIKE ? OR lower(last_name) LIKE ?", "%#{@query.downcase}%", "%#{@query.downcase}%").paginate(:page => params[:page], :per_page => 10)
     else
-      @admins = User.with_role(:admin).order('users.last_name, users.first_name')
+      @admins = User.with_role(:admin).order('users.last_name, users.first_name').paginate(:page => params[:page], :per_page => 10)
     end
   end
 
   private
 
   def sort_column
-    User.column_names.include?(params[:sort]) ? params[:sort] : "last_name"
+    User.column_names.include?(params[:sort]) ? params[:sort] : "users.last_name"
   end
 
   def sort_direction

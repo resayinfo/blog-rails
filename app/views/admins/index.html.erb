@@ -26,9 +26,10 @@
         </tr>
       <% end %>
     </table>
-  </div><!--. admins -->
 
-  <div class="pagination"><%#= will_paginate @admins %></div>
+    <div class="pagination"><%= will_paginate @admin %></div>
+
+  </div><!--. admins -->
 
 <% else %>
   <h1 class="page-header" align="center">You are not authorized</h1>

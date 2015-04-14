@@ -48,9 +48,9 @@ class UsersController < ApplicationController
     @query = params[:q]
     @users = []
     if @query.present?
-      @users =  User.where("lower(first_name) LIKE ? OR lower(last_name) LIKE ?", "%#{@query.downcase}%", "%#{@query.downcase}%")
+      @users =  User.where("lower(first_name) LIKE ? OR lower(last_name) LIKE ?", "%#{@query.downcase}%", "%#{@query.downcase}%").paginate(:page => params[:page], :per_page => 30)
     else
-      @users = User.order('users.last_name, users.first_name')
+      @users = User.order('users.last_name, users.first_name').paginate(:page => params[:page], :per_page => 30)
     end
   end
 

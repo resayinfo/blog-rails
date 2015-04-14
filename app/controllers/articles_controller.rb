@@ -53,9 +53,9 @@ class ArticlesController < ApplicationController
     @query = params[:q]
     @articles = []
     if @query.present?
-      @articles = Article.where("lower(title) LIKE ?", "%#{@query.downcase}%")
+      @articles = Article.where("lower(title) LIKE ?", "%#{@query.downcase}%").paginate(:page => params[:page], :per_page => 10)
     else
-      @articles = Article.all.order(:title)
+      @articles = Article.order(:title).paginate(:page => params[:page], :per_page => 10)
     end
   end
 

@@ -72,9 +72,9 @@ class SuperadminsController < ApplicationController
     @query = params[:q]
     @superadmins = []
     if @query.present?
-      @superadmins =  User.with_role(:superadmin).where("lower(first_name) LIKE ? OR lower(last_name) LIKE ?", "%#{@query.downcase}%", "%#{@query.downcase}%")
+      @superadmins =  User.with_role(:superadmin).where("lower(first_name) LIKE ? OR lower(last_name) LIKE ?", "%#{@query.downcase}%", "%#{@query.downcase}%").paginate(:page => params[:page], :per_page => 10)
     else
-      @superadmins = User.with_role(:superadmin).order('users.last_name, users.first_name')
+      @superadmins = User.with_role(:superadmin).order('users.last_name, users.first_name').paginate(:page => params[:page], :per_page => 10)
     end
   end
 

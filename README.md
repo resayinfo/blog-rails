@@ -57,7 +57,7 @@ None at this time.
 
 ```
 # Production
-$ git push heroku master
+$ git push production master
 ```
 
 ## TODO

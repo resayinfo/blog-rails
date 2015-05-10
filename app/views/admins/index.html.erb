@@ -6,8 +6,8 @@
 
     <table>
       <tr>
-        <th class="admins-index-table-headlines"><%= sortable "last_name", "Name" %></th>
-        <th class="admins-index-table-headlines"><%= sortable "email", "Email" %></th>
+        <th class="admins-index-table-headlines">Name</th>
+        <th class="admins-index-table-headlines">Email</th>
         <% if can? :create, User %>
           <th colspan="2">
             <%= link_to 'New Administrator', new_admin_path, class: 'btn btn-success' %>
@@ -26,8 +26,6 @@
         </tr>
       <% end %>
     </table>
-
-    <div class="pagination"><%= will_paginate @admin %></div>
 
   </div><!--. admins -->
 

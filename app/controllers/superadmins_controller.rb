@@ -2,14 +2,12 @@ class SuperadminsController < ApplicationController
   before_action :cancan_rails4_hack
   load_and_authorize_resource :superadmin, class: User.with_role(:superadmin)
 
-  helper_method :sort_column, :sort_direction
-
   def cancan_rails4_hack
     @superadmin = User.new
   end
 
   def index
-    @superadmin = User.with_role(:superadmin).order(sort_column + " " + sort_direction).paginate(:page => params[:page], :per_page => 10)
+    @superadmin = User.with_role(:superadmin).all
   end
 
   def show
@@ -79,14 +77,6 @@ class SuperadminsController < ApplicationController
   end
 
   private
-
-  def sort_column
-    User.column_names.include?(params[:sort]) ? params[:sort] : "users.last_name"
-  end
-
-  def sort_direction
-    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
-  end
 
   def superadmin_params
     params.require(:user).permit(:email, :first_name, :last_name, :password, :biography, :avatar, :avatar_cache, :remove_avatar)

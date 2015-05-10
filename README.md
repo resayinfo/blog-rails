@@ -65,7 +65,4 @@ $ git push heroku master
 ```
 1. Associate user with comment ( comment.user )
 2. In Heroku, Carrierwave uploads must be stored on S3 and cannot be cached in the public directory
-3-a. Fix admin and superadmin index tables' sorting + overall default sorting
-3-b. Fix admin index pagination
-3-c. Add caret for current column sorting
 ```

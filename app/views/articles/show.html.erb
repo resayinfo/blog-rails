@@ -28,10 +28,8 @@
     </tr>
   </table>
 
-  <% if @article.comments.present? %>
-    <h2 class="comments">Comments</h2>
-    <%= render @article.comments %>
-  <% end %>
+  <!-- <h2 class="comments">Comments</h2> -->
+  <%= render @article.comments if @article.comments.present? %>
   <% if can? :manage, Comment %>
     <h3 class="comment">Add a comment:</h3>
     <%= render "comments/form" %>
